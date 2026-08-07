@@ -4,27 +4,24 @@ export default function Homepage() {
   return (
     <div className="flex flex-col gap-24 pb-24">
       
-      <section id="home" className="min-h-[80vh] flex flex-col justify-center pt-10">
-        <h1 className="text-5xl md:text-6xl font-display font-extrabold text-slate-900 mb-6 tracking-tight">
-          Hi, I'm Jether. <br />
-          <span className="text-blue-600">Full-Stack Developer.</span>
-        </h1>
-        <p className="text-lg text-slate-600 max-w-2xl mb-8">
-          I specialize in building responsive web applications, backend systems, and Web3 technologies. Based in Baguio City.
-        </p>
-        <div>
-          <a href="#projects" className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
-            View My Work
-          </a>
+      <section id="home" className="min-h-[80vh] flex flex-col justify-center pt-10 -mt-20">
+        <div className="flex flex-row justify-center items-center">
+          <img src="/profile.png" alt="Profile" className="border-dashed px-2 py-2 border border-gray-300 rounded-md w-75 h-75" />
+          <div className="flex flex-col ml-10">
+            <h1 className="text-5xl md:text-4xl font-display font-extrabold text-slate-900 mb-6 tracking-tight">
+              Hi, I'm Jether. <br />
+              <span className="text-blue-600">Full-Stack Developer.</span>
+            </h1>
+          </div>
         </div>
       </section>
 
 
-      <section id="about" className="min-h-screen pt-20">
-        <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">About Me</h2>
-        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+      <section id="about" className="min-h-screen -mt-60">
+        <h2 className="text-xl font-display font-bold text-slate-900 mb-8">About Me</h2>
+        <div className=" p-8 rounded-2xl border border-slate-300">
           <p className="text-slate-600 mb-4">
-            I am an Information Technology student and freelance developer with a strong foundation in modern web frameworks like React, Node.js, and Tailwind CSS.
+            Full-stack developer committed to delivering high-quality digital solutions that drive value for users and communities. With a strong technical foundation in End-to-End Development and User-Centered Design, I focus on building seamless, functional software. 
           </p>
           <p className="text-slate-600">
             I also have experience as a graphic designer and am currently exploring blockchain development.
@@ -33,7 +30,7 @@ export default function Homepage() {
       </section>
 
 
-      <section id="projects" className="min-h-screen pt-20">
+      <section id="projects" className="min-h-screen -mt-160">
         <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
