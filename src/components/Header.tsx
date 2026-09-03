@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Home, Code, Briefcase, Mail, FileBadge, BookImage, CodeXml } from 'lucide-react';
+import { Mail, FileBadge, BookImage } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
@@ -8,13 +8,6 @@ export default function Header() {
   
   const [activeHash, setActiveHash] = useState('#home');
 
-
-  const NavItems = [
-    { name: 'Home', path: '#home', icon: Home },
-    { name: 'Skills', path: '#skills', icon: CodeXml },
-    { name: 'Projects', path: '#projects', icon: Code },
-    { name: 'Experience', path: '#experience', icon: Briefcase },
-  ];
 
   const SoloNavItems = [
     { name: 'Certifications', path: '/certifications', icon: FileBadge },
@@ -53,8 +46,8 @@ export default function Header() {
 };
 
   return (
-    <header className="sticky top-4 z-50 mx-auto w-[95%] md:w-2/3 mt-4 border border-slate-200 bg-white/70 backdrop-blur-md shadow-lg rounded-2xl">
-      <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
+    <header className="sticky top-4 z-50 mx-auto w-[85%] md:w-1/2 mt-4 border border-slate-200 bg-white/70 backdrop-blur-md shadow-lg rounded-2xl">
+      <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-6xl">
 
         <div className="flex items-center shrink-0 pl-2">
           <div className="relative inline-block" onClick={(e) => handleScroll(e, '#home')}>
@@ -67,16 +60,14 @@ export default function Header() {
           </div>
         </div>
 
-
         <nav className="flex items-center flex-1 justify-center gap-1 px-4 overflow-x-auto no-scrollbar">
-          {NavItems.map((item) => {
-            const isActive = activeHash === item.path;
+          {SoloNavItems.map((item) => {
+            const isActive = location.pathname === item.path;
             const Icon = item.icon;
             return (
               <Link
                 key={item.name}
                 to={item.path}
-                onClick={(e) => handleScroll(e, item.path)}
                 className={`flex items-center px-3 py-2 text-xs font-medium rounded-lg transition-colors whitespace-nowrap ${
                   isActive 
                     ? 'bg-blue-50 text-blue-700' 
@@ -93,29 +84,6 @@ export default function Header() {
           })}
         </nav>
         <div className="flex items-center space-x-1 shrink-0">
-          <nav className="flex items-center flex-1 justify-center gap-1 px-4 overflow-x-auto no-scrollbar">
-            {SoloNavItems.map((item) => {
-              const isActive = location.pathname === item.path;
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`flex items-center px-3 py-2 text-xs font-medium rounded-lg transition-colors whitespace-nowrap ${
-                    isActive 
-                      ? 'bg-blue-50 text-blue-700' 
-                      : 'text-slate-600 hover:bg-slate-200 hover:text-slate-900'
-                  }`}
-                >
-                  <Icon 
-                    className={`w-4 h-4 mr-2 ${isActive ? 'text-blue-700' : 'text-slate-500'}`} 
-                    strokeWidth={2}
-                  />
-                  <span className="hidden md:inline">{item.name}</span>
-                </Link>
-              );
-            })}
-          </nav>
           <a 
             href="https://github.com" 
             target="_blank" 
