@@ -1,6 +1,8 @@
 
 const IonIcon = 'ion-icon' as any;
 import type { Project } from "../types";
+import type { Experience  } from "../types";
+import GithubHeatmap from "../components/GithubHeatmap";
 import ScrollIndicator from "../components/ScrollIndicator";
 export default function Homepage() {
 
@@ -78,7 +80,31 @@ export default function Homepage() {
     { id: 1, title: "Verilocal", description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", date: "November 2025", link: ""},
     { id: 2, title: "UTPRAS Portal", description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", techStack: [], image: "src/assets/projects/utpras.png", date: "June 2026", link: ""},
     { id: 1, title: "Recom", description: "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", techStack: [], image: "src/assets/projects/recom.png", date: "August 2026", link: ""}
-  ]
+  ];
+
+  const experiencesData: Experience[] = [
+    {
+      id: 1,
+      role: "Freelance Fullstack Developer",
+      date: "August 2026 - Present",
+      description: "",
+      current: true, 
+    },
+    {
+      id: 2,
+      role: "Web Developer",
+      date: "June - August 2026",
+      description: "Developed a web application for TESDA CAR Regional Office.",
+      current: false, 
+    },
+    {
+      id: 3,
+      role: "First Hello World!",
+      date: "Aug 2023",
+      description: "Executed commission-based graphic design projects.",
+      current: false, 
+    },
+  ];
 
 
 
@@ -232,23 +258,55 @@ export default function Homepage() {
             </div>
           ))}
         </div>
+        <div className="mt-5">
+          <GithubHeatmap />
+        </div>
       </section>
 
 
       <section id="experience" className="min-h-[80vh] pt-20">
-        <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Experience</h2>
-        <div className="border-l-2 border-slate-200 pl-6 ml-3 space-y-8">
-          <div className="relative">
-            <div className="absolute w-3 h-3 bg-blue-600 rounded-full left-[-1.95rem] top-1.5 border-4 border-white"></div>
-            <h3 className="text-lg font-bold text-slate-900">Freelance Web Developer</h3>
-            <p className="text-sm text-slate-500 mb-2">Present</p>
-            <p className="text-slate-600">Developing custom responsive sites and applications.</p>
-          </div>
-          <div className="relative">
-            <div className="absolute w-3 h-3 bg-slate-300 rounded-full left-[-1.95rem] top-1.5 border-4 border-white"></div>
-            <h3 className="text-lg font-bold text-slate-900">Freelance Creative Designer</h3>
-            <p className="text-sm text-slate-500 mb-2">Previous</p>
-            <p className="text-slate-600">Executed commission-based graphic design projects.</p>
+        <h2 className="text-3xl font-display font-bold text-slate-900 mb-12">
+          Experience
+        </h2>
+        
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="flex flex-col">
+            
+            {experiencesData.map((exp, index) => {
+              const isEven = index % 2 === 0; 
+              const isLast = index === experiencesData.length - 1; 
+
+              return (
+                <div key={exp.id} className="relative w-full pb-16">                  
+                  <div 
+                    className={`absolute top-0 w-full h-full border-slate-300 border-dotted ${
+                      isEven 
+                        ? 'border-l-2 border-b-2' 
+                        : 'border-r-2 border-b-2' 
+                    } ${isLast ? 'border-b-0' : ''}`}
+                  ></div>
+
+                  <div className={`relative flex pt-8 ${isEven ? 'justify-start' : 'justify-end'}`}>
+                    
+                    <div 
+                      className={`absolute top-12 w-4 h-4 rounded-full border-4 bg-white z-10 ${
+                        exp.current ? 'border-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.4)]' : 'border-slate-300'
+                      } ${isEven ? '-left-2.25' : '-right-2.25'}`}
+                    ></div>
+
+                    <div className={`w-[85%] sm:w-[70%] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm z-10 hover:shadow-md transition-shadow ${
+                      isEven ? 'ml-8 text-left' : 'mr-8 text-right'
+                    }`}>
+                      <h3 className="text-lg font-bold text-slate-900 mb-1">{exp.role}</h3>
+                      <p className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-3">{exp.date}</p>
+                      <p className="text-slate-600 text-sm">{exp.description}</p>
+                    </div>
+
+                  </div>
+                </div>
+              );
+            })}
+
           </div>
         </div>
       </section>
