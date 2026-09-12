@@ -5,7 +5,7 @@ export default function GithubHeatmap() {
     <div className=" rounded-2xl p-6 flex flex-col w-full">
 
       
-      <div className="w-full overflow-x-auto flex justify-start md:justify-center pb-2 [&_footer>*:last-child]:!hidden">
+      <div className="w-full overflow-x-auto flex justify-start md:justify-center pb-2 [&_footer>*:last-child]:hidden!">
         <GitHubCalendar 
           username="jethermasidong" 
           blockSize={14}
