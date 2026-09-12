@@ -1,12 +1,12 @@
 
 const IonIcon = 'ion-icon' as any;
-import type { Project } from "../types";
+import type { Certification, Project } from "../types";
 import type { Experience  } from "../types";
 import GithubHeatmap from "../components/GithubHeatmap";
 import ScrollIndicator from "../components/ScrollIndicator";
 export default function Homepage() {
 
-  const pageSections = ["home", "skills", "projects", "experience", "contact"];
+  const pageSections = ["home", "skills-experience", "projects", "certifications-gallery", "contact"];
 
   const Techstacks = [
     {
@@ -77,9 +77,33 @@ export default function Homepage() {
 
 
   const Projects: Project[] = [
-    { id: 1, title: "Verilocal", description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", date: "November 2025", link: ""},
-    { id: 2, title: "UTPRAS Portal", description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", techStack: [], image: "src/assets/projects/utpras.png", date: "June 2026", link: ""},
-    { id: 1, title: "Recom", description: "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", techStack: [], image: "src/assets/projects/recom.png", date: "August 2026", link: ""}
+    { 
+        id: 1, 
+        title: "Verilocal", 
+        description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", 
+        techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", 
+        date: "November 2025", 
+        link: ""
+    },
+    { 
+        id: 2, 
+        title: "UTPRAS Portal", 
+        description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", 
+        techStack: [], 
+        image: "src/assets/projects/utpras.png", 
+        date: "June 2026", 
+        link: ""
+    },
+    { 
+        id: 3, 
+        title: "Recom", 
+        description: 
+        "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", 
+        techStack: [], 
+        image: "src/assets/projects/recom.png", 
+        date: "August 2026", 
+        link: ""
+    }
   ];
 
   const experiencesData: Experience[] = [
@@ -106,6 +130,37 @@ export default function Homepage() {
     },
   ];
 
+  const Certifications: Certification[] = [
+    {
+      id: 1,
+      title: "NCIII Web Development",
+      logo: "src/assets/logo/tesda.png",
+      category: "Development",
+      issuer: "TESDA",
+      link: "",
+      date: "August 2026"
+    },
+    {
+      id: 2,
+      title: "AI Professional Certificate",
+      logo: "src/assets/logo/google.png",
+      category: "AI",
+      issuer: "Google Coursera",
+      link: "https://coursera.org/share/dd0fdb0ef228eba17f58a6adaf730246",
+      date: "August 2026"
+    },
+    {
+      id: 3,
+      title: "Web Development Fundamentals",
+      logo: "src/assets/logo/ibm.png",
+      category: "Development",
+      issuer: "IBM",
+      link: "",
+      date: "June 2026"
+    },
+  ];
+
+
 
 
 
@@ -113,50 +168,81 @@ export default function Homepage() {
     <div className="flex flex-col gap-20">
       <ScrollIndicator sections={pageSections} />
       
-      <section id="home" className="flex flex-col justify-center min-h-[80vh]">
-        <div className="flex flex-row justify-center items-center">
-          <img src="/profile.png" alt="Profile" className="border-dashed px-2 py-2 border border-gray-300 rounded-md w-95 h-105" />
-          <div className="flex flex-col ml-5">
-            <h1 className="text-7xl md:text-5xl font-display font-extrabold text-slate-900 mb-2 tracking-tight">
-              Hi, I'm Jether Masidong. <br />
-              <span className="text-blue-600 text-2xl">Full-Stack Developer</span>
-              <p className="text-slate-600 text-lg font-light mt-2">
-                I am a Full-Stack Developer with experience building web applications, APIs,<br /> 
-                and scalable systems. At present, I am learning more about emerging technologies <br />
-                such as blockchain (Web3) and artificial intelligence (AI). I am particularly <br />
-                interested in these fields because I want to expand my technical skills and explore <br />
-                innovative solutions for real-world problems.
-              </p>
-            </h1>
-            <div className="flex flex-row items-center gap-3">
-              <div className="flex flex-row items-center text-black border-black/20 border w-fit px-3 py-1 rounded-full">
-              <IonIcon name="pin-outline"></IonIcon>
-              <span className="text-xs">Baguio City, Philippines.</span>
+      <section id="home" className="flex flex-col justify-center min-h-[80vh] animate-page-in">
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row justify-center items-center">
+            <img src="/profile.png" alt="Profile" className="border px-2 py-2 border-gray-300 w-95 h-102" />
+            <div className="flex flex-col ml-5 border border-gray-300 p-5">
+              <div className="text-5xl md:text-3xl font-display font-extrabold text-slate-900 mb-2 tracking-tight h-auto">
+                <div className="flex flex-row justify-between items-center border border-gray-300 p-5 mb-4">
+                  <div className="flex flex-row justify-center items-center gap-1">
+                    <h1 className="text-2xl">Jether Masidong</h1>
+                    <img src="verified.png" alt="Profile" className="w-4 h-4 mt-1" />
+                  </div>
+                  <span className="text-blue-600 text-2xl">Full-Stack Developer</span>
+                </div>
+                <div className="border border-gray-300 p-5 w-157 mt-2 mb-2">
+                  <p className="text-slate-600 text-sm font-extralight tracking-wide">
+                    I am a Full-Stack Developer with experience building web applications, APIs,
+                    and scalable systems. At present, I am learning more about emerging technologies 
+                    such as blockchain (Web3) and artificial intelligence (AI). I am particularly 
+                    interested in these fields because I want to expand my technical skills and explore
+                    innovative solutions for real-world problems.
+                  </p>
+                  <p className="text-slate-600 text-sm font-extralight tracking-wide mt-1">
+                    I am a Full-Stack Developer with experience building web applications, APIs,
+                    and scalable systems. At present, I am learning more about emerging technologies 
+                    such as blockchain (Web3) and artificial intelligence (AI). I am particularly
+                    and scalable systems. At present, I am learning more about emerging technologies 
+                  </p>
+                </div>
               </div>
-              <a href="" className="flex flex-row items-center border text-blue-600 w-fit px-3 py-1 rounded-full transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
-                <IonIcon name="document-text-outline"></IonIcon>
-                <span className="text-xs">Download CV</span>
-              </a>
+              <div className="flex flex-row items-center gap-3">
+                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1">
+                  <IonIcon name="pin-outline"></IonIcon>
+                  <span className="text-xs">Baguio City, Philippines.</span>
+                </div>
+                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1">
+                  <IonIcon name="call-outline"></IonIcon>
+                  <span className="text-xs">09622635703</span>
+                </div>
+                <div className="flex flex-row items-center text-black border-blue-600 border w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1">
+                  <IonIcon name="logo-linkedin"></IonIcon>
+                  <span className="text-xs">LinkedIn</span>
+                </div>
+                <a href="" className="flex flex-row items-center border text-black border-blue-600  w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1">
+                  <IonIcon name="document-text-outline"></IonIcon>
+                  <span className="text-xs">Download CV</span>
+                </a>
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
-              <div className="bg-white rounded-2xl border border-slate-200 p-2 flex flex-col items-center justify-center text-center shadow-sm">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-1">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 p-4 mt-4 items-center shadow-sm">
+            <div className="md:col-span-5 bg-white border border-slate-200 p-4 shadow-sm h-full flex flex-col justify-center">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">Education</span>
+              <h4 className="text-sm font-bold text-slate-900 leading-tight">Bachelor of Science in Information Technology</h4>
+              <p className="text-xs text-slate-600 mt-1">University of the Cordilleras | 2023 – 2026</p>
+            </div>
+            <div className="md:col-span-7 grid grid-cols-3 gap-3">
+              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5">
                   8+
                 </h4>
-                <p className="text-slate-600 text-sm font-medium">Total Projects</p>
+                <p className="text-slate-600 text-sm font-medium mb-2.5">Total Projects</p>
               </div>
 
-              <div className="bg-white rounded-2xl border border-slate-200 p-2 flex flex-col items-center justify-center text-center shadow-sm">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-1">
+              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5">
                   40+
                 </h4>
-                <p className="text-slate-600 text-sm font-medium">Github Repositories</p>
+                <p className="text-slate-600 text-sm font-medium mb-2.5">Github Repos</p>
               </div>
-              <div className="bg-white rounded-2xl border border-slate-200 p-2 flex flex-col items-center justify-center text-center shadow-sm">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-1">
+              
+              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm">
+                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5">
                   33+
                 </h4>
-                <p className="text-slate-600 text-sm font-medium">Tech Stack</p>
+                <p className="text-slate-600 text-sm font-medium mb-2.5">Tech Stack</p>
               </div>
             </div>
           </div>
@@ -164,36 +250,83 @@ export default function Homepage() {
       </section>
 
 
-      <section id="skills" className="min-h-[80vh] pt-28">
-        <h2 className="text-xl font-display font-bold text-slate-900 mb-8">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {Techstacks.map((stack, index) => (
-            <div key={index} className="bg-gray-100 p-6 rounded-2xl border border-double border-gray-400 shadow-xl hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-display font-bold mb-4 text-slate-800">{stack.category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {stack.skills.map((skill, skillIndex) => (
-                  <span 
-                    key={skillIndex} 
-                    className="px-3 py-1 bg-white text-sm font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center"
-                  >
-                    {skill.icon && (
-                      <span className="flex items-center text-black text-base">
-                        <IonIcon name={skill.icon}></IonIcon>
+      <section id="skills-experience" className="min-h-[80vh] pt-20 flex flex-col justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div className="lg:col-span-6 flex flex-col">
+            <h2 className="text-lg font-display font-bold text-slate-900 mb-4">Expertise & Background</h2>
+            <div className="p-4 border border-double border-gray-300 shadow-lg rounded-md">
+              {Techstacks.map((stack, index) => (
+                <div key={index} className={index !== Techstacks.length - 1 ? "mb-4" : ""}>
+                  <h3 className="text-sm font-display font-bold mb-2 text-slate-800">
+                    {stack.category}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {stack.skills.map((skill, skillIndex) => (
+                      <span 
+                        key={skillIndex} 
+                        className="px-2.5 py-0.5 bg-white text-xs font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center"
+                      >
+                        {skill.icon && (
+                          <span className="flex items-center text-black text-sm">
+                            <IonIcon name={skill.icon}></IonIcon>
+                          </span>
+                        )}
+                        {skill.img && (
+                          <img 
+                            src={skill.img} 
+                            alt={`${skill.name} icon`} 
+                            className="w-3.5 h-3.5 object-contain" 
+                          />
+                        )}
+                        {skill.name}
                       </span>
-                    )}
-                    {skill.img && (
-                      <img 
-                        src={skill.img} 
-                        alt={`${skill.name} icon`} 
-                        className="w-4 h-4 object-contain" 
-                      />
-                    )}
-                    {skill.name}
-                  </span>
-                ))}
+                    ))}
+                  </div>
+                  {index !== Techstacks.length - 1 && (
+                    <hr className="my-3 border-t border-gray-300/60" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="w-full mt-11">
+              <div className="flex flex-col border border-gray-300 p-5 rounded-md  shadow-lg">
+                {experiencesData.map((exp, index) => {
+                  const isEven = index % 2 === 0; 
+                  const isLast = index === experiencesData.length - 1; 
+
+                  return (
+                    <div key={exp.id} className="relative w-full pb-8">                 
+                      <div 
+                        className={`absolute top-0 w-full h-full border-slate-300 border-dotted ${
+                          isEven 
+                            ? 'border-l-2 border-b-2' 
+                            : 'border-r-2 border-b-2' 
+                        } ${isLast ? 'border-b-0' : ''}`}
+                      ></div>
+
+                      <div className={`relative flex pt-4 ${isEven ? 'justify-start' : 'justify-end'}`}>
+                        <div 
+                          className={`absolute top-6 w-3 h-3 rounded-full border-2 bg-white z-10 ${
+                            exp.current ? 'border-blue-600 shadow-[0_0_6px_rgba(37,99,235,0.4)]' : 'border-slate-300'
+                          } ${isEven ? '-left-1.5' : '-right-1.5'}`}
+                        ></div>
+
+                        <div className={`w-[70%] sm:w-[55%] bg-white p-4 rounded-xl border border-slate-200 shadow-sm z-10 hover:shadow-md transition-shadow ${
+                          isEven ? 'ml-6 text-left' : 'mr-6 text-right'
+                        }`}>
+                          <h3 className="text-sm font-bold text-slate-900 mb-0.5">{exp.role}</h3>
+                          <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-2">{exp.date}</p>
+                          <p className="text-slate-600 text-xs leading-relaxed">{exp.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -209,10 +342,12 @@ export default function Homepage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {Projects.map((project) => (
+          {Projects.map((project, index) => (
             <div 
               key={project.id} 
-              className="bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden"
+              className={`bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col mt-10 overflow-hidden ${
+                index === 0 ? '-rotate-3 translate-y-2' : index === 2 ? 'rotate-3 translate-y-2' : ''
+              }`}
             >
               <div className="relative h-56 w-full bg-gray-100 overflow-hidden p-4">
                 <img 
@@ -221,7 +356,7 @@ export default function Homepage() {
                   className="w-full h-full rounded-lg object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-5">
+              <div className="p-5 flex flex-col grow">
                 <h3 className="text-xl font-display font-bold mb-2">
                   {project.title}
                 </h3>
@@ -258,72 +393,69 @@ export default function Homepage() {
             </div>
           ))}
         </div>
-        <div className="mt-5">
-          <GithubHeatmap />
-        </div>
       </section>
 
-
-      <section id="experience" className="min-h-[80vh] pt-20">
-        <h2 className="text-3xl font-display font-bold text-slate-900 mb-12">
-          Experience
-        </h2>
-        
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="flex flex-col">
-            
-            {experiencesData.map((exp, index) => {
-              const isEven = index % 2 === 0; 
-              const isLast = index === experiencesData.length - 1; 
-
-              return (
-                <div key={exp.id} className="relative w-full pb-16">                  
+      <section id="certifications-gallery" className="min-h-[80vh] pt-20 pb-20">
+          <div className="flex flex-col items-center justify-between">
+            <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
+              Certifications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {Certifications.map((cert, index) => (
+                <div 
+                  key={cert.id} 
+                  className={`bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col mt-10 overflow-hidden ${
+                    index === 0 ? '-rotate-3 translate-y-2' : index === 2 ? 'rotate-3 translate-y-2' : ''
+                  }`}
+                >
                   <div 
-                    className={`absolute top-0 w-full h-full border-slate-300 border-dotted ${
-                      isEven 
-                        ? 'border-l-2 border-b-2' 
-                        : 'border-r-2 border-b-2' 
-                    } ${isLast ? 'border-b-0' : ''}`}
-                  ></div>
-
-                  <div className={`relative flex pt-8 ${isEven ? 'justify-start' : 'justify-end'}`}>
-                    
-                    <div 
-                      className={`absolute top-12 w-4 h-4 rounded-full border-4 bg-white z-10 ${
-                        exp.current ? 'border-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.4)]' : 'border-slate-300'
-                      } ${isEven ? '-left-2.25' : '-right-2.25'}`}
-                    ></div>
-
-                    <div className={`w-[85%] sm:w-[70%] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm z-10 hover:shadow-md transition-shadow ${
-                      isEven ? 'ml-8 text-left' : 'mr-8 text-right'
-                    }`}>
-                      <h3 className="text-lg font-bold text-slate-900 mb-1">{exp.role}</h3>
-                      <p className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-3">{exp.date}</p>
-                      <p className="text-slate-600 text-sm">{exp.description}</p>
+                      key={cert.id} 
+                      className="flex-1 bg-gray-500/20 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow"
+                    >
+                      <div>
+                        <div className="mb-4">
+                          <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50">
+                            {cert.category}
+                          </span>
+                        </div>
+                        <h4 className="font-bold text-sm text-slate-900 mb-2">
+                          {cert.title}
+                        </h4>
+                        <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full">
+                          <img src={cert.logo} alt={`${cert.title} logo`} className="w-4 h-4 object-contain" />
+                          <p className="text-xs text-slate-600">
+                            {cert.issuer}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-row items-center gap-2 mb-2 mt-4 justify-between">
+                        <p className="text-xs text-slate-400 font-medium">
+                          Issued: {cert.date}
+                        </p>
+                        <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
+                          Verify &rarr;
+                        </a>
+                      </div>
                     </div>
-
-                  </div>
                 </div>
-              );
-            })}
-
+              ))}
+            </div>
+            <h2 className="text-xl font-display font-bold text-slate-900 mb-8 mt-20">
+              Gallery
+            </h2>
           </div>
-        </div>
       </section>
 
 
-      <section id="contact" className="min-h-[50vh] pt-20 pb-20">
-        <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Get In Touch</h2>
-        <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 text-center">
-          <p className="text-slate-700 mb-6">
-            Currently looking for new opportunities and internships. My inbox is always open!
-          </p>
-          <a href="mailto:your-email@example.com" className="inline-flex px-6 py-3 bg-slate-900 text-white rounded-lg font-medium hover:bg-slate-800 transition-colors">
-            Say Hello
-          </a>
-        </div>
+      <section id="contact" className="min-h-[80vh] pt-20 pb-20">
+          <div className="flex flex-col items-center justify-between">
+            <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
+              Github Heatmap
+            </h2>
+            <GithubHeatmap />
+          </div>
       </section>
-
     </div>
   );
 }
