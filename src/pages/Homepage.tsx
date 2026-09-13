@@ -1,167 +1,38 @@
+import { useState } from "react";
+
+const imageModules = import.meta.glob('/src/assets/gallery/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG}', { 
+  eager: true, 
+  query: '?url',
+  import: 'default' 
+});
 
 const IonIcon = 'ion-icon' as any;
-import type { Certification, Project } from "../types";
-import type { Experience  } from "../types";
 import GithubHeatmap from "../components/GithubHeatmap";
 import ScrollIndicator from "../components/ScrollIndicator";
+import { Techstacks, Projects, experiencesData, Certifications, pageSections } from "../data/portfolio.ts";
+
 export default function Homepage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const pageSections = ["home", "skills-experience", "projects", "certifications-gallery", "contact"];
+  const galleryItems = Object.keys(imageModules).map((path, index) => {
+    const imageUrl = imageModules[path] as string; 
+    return {
+      id: index + 1,
+      src: imageUrl,
+      alt: path.split('/').pop()?.split('.')[0] || `Gallery image ${index + 1}`
+    };
+  });
 
-  const Techstacks = [
-    {
-      category: "Frontend",
-      skills: [
-        { name: "HTML", icon: "logo-html5"},
-        { name: "CSS", icon: "logo-css3"},
-        { name: "Javascript", icon: "logo-javascript"}, 
-        { name: "Typescript", img: "/stack-icons/typescript.png"}, 
-        { name: "React", icon: "logo-react" }, 
-        { name: "Tailwind CSS", img: "/stack-icons/tailwind.png"}, 
-        { name: "Next JS", img: "/stack-icons/nextjs.png"}, 
-        { name: "Vite", img: "/stack-icons/vite.png"},
-        { name: "Vue.js", img: "/stack-icons/vue.png"}
-      ]
-    },
-    {
-      category: "Backend",
-      skills: [
-        { name: "Node JS", icon: "logo-nodejs" },
-        { name: "Express", img: "/stack-icons/express.png" }, 
-        { name: "REST API", img: "/stack-icons/restapi.png" }, 
-        { name: "PHP", img: "/stack-icons/php.png" }, 
-        { name: "Laravel", icon: "logo-laravel" },
-        { name: "Python", icon: "logo-python" },
-      ]
-    },
-    {
-      category: "Database",
-      skills: [
-        { name: "MySQL", img: "/stack-icons/mysql.png" },
-        { name: "Postgre SQL", img: "/stack-icons/postgre.png" },
-        { name: "SQLite", img: "/stack-icons/sqlite.png" },
-        { name: "Supabase", img: "/stack-icons/supabase.png" },
-      ]
-    },
-    {
-      category: "AI and Blockchain",
-      skills: [
-        { name: "Ethereum", img: "/stack-icons/ethereum.png" },
-        { name: "Solidity", img: "/stack-icons/solidity.png" },
-        { name: "Alchemy", img: "/stack-icons/alchemy.png" }, 
-        { name: "Google Gemini", img: "/stack-icons/gemini.png"},
-      ]
-    },
-    
-    {
-      category: "Cloud & DevOps",
-      skills: [
-        { name: "Git", icon: "git-branch-outline" },
-        { name: "Github", icon: "logo-github" },
-        { name: "Cloudinary", img: "/stack-icons/cloudinary.png" }, 
-        { name: "Vercel", img: "/stack-icons/vercel.png"},
-        { name: "Render", img: "/stack-icons/render.png"}, 
-      ]
-    },
-    {
-      category: "Other Tools",
-      skills: [
-        { name: "Postman", img: "/stack-icons/postman.png" },
-        { name: "Figma", icon: "logo-figma" },
-        { name: "Canva", img: "/stack-icons/canva.png" },
-        { name: "Microsoft Tools", img: "/stack-icons/microsoft.png" },
-        { name: "Visual Studio Code", img: "/stack-icons/vscode.png" },
-      ]
-    }
-  ];
+  const nextSlide = () => {
+    if (galleryItems.length <= 5) return;
+    setCurrentIndex((prev) => (prev + 1) % galleryItems.length);
+  };
 
-
-  const Projects: Project[] = [
-    { 
-        id: 1, 
-        title: "Verilocal", 
-        description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", 
-        techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", 
-        date: "November 2025", 
-        link: ""
-    },
-    { 
-        id: 2, 
-        title: "UTPRAS Portal", 
-        description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", 
-        techStack: [], 
-        image: "src/assets/projects/utpras.png", 
-        date: "June 2026", 
-        link: ""
-    },
-    { 
-        id: 3, 
-        title: "Recom", 
-        description: 
-        "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", 
-        techStack: [], 
-        image: "src/assets/projects/recom.png", 
-        date: "August 2026", 
-        link: ""
-    }
-  ];
-
-  const experiencesData: Experience[] = [
-    {
-      id: 1,
-      role: "Freelance Fullstack Developer",
-      date: "August 2026 - Present",
-      description: "",
-      current: true, 
-    },
-    {
-      id: 2,
-      role: "Web Developer",
-      date: "June - August 2026",
-      description: "Developed a web application for TESDA CAR Regional Office.",
-      current: false, 
-    },
-    {
-      id: 3,
-      role: "First Hello World!",
-      date: "Aug 2023",
-      description: "Executed commission-based graphic design projects.",
-      current: false, 
-    },
-  ];
-
-  const Certifications: Certification[] = [
-    {
-      id: 1,
-      title: "NCIII Web Development",
-      logo: "src/assets/logo/tesda.png",
-      category: "Development",
-      issuer: "TESDA",
-      link: "",
-      date: "August 2026"
-    },
-    {
-      id: 2,
-      title: "AI Professional Certificate",
-      logo: "src/assets/logo/google.png",
-      category: "AI",
-      issuer: "Google Coursera",
-      link: "https://coursera.org/share/dd0fdb0ef228eba17f58a6adaf730246",
-      date: "August 2026"
-    },
-    {
-      id: 3,
-      title: "Web Development Fundamentals",
-      logo: "src/assets/logo/ibm.png",
-      category: "Development",
-      issuer: "IBM",
-      link: "",
-      date: "June 2026"
-    },
-  ];
-
-
-
+  const prevSlide = () => {
+    if (galleryItems.length <= 5) return;
+    setCurrentIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
+  };
 
 
   return (
@@ -210,14 +81,14 @@ export default function Homepage() {
                   <IonIcon name="logo-linkedin"></IonIcon>
                   <span className="text-xs">LinkedIn</span>
                 </div>
-                <a href="" className="flex flex-row items-center border text-black border-blue-600  w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1">
+                <a href="" className="flex flex-row items-center border text-black border-blue-600 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1">
                   <IonIcon name="document-text-outline"></IonIcon>
                   <span className="text-xs">Download CV</span>
                 </a>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 p-4 mt-4 items-center shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 p-4 mt-4 items-center shadow-sm w-full">
             <div className="md:col-span-5 bg-white border border-slate-200 p-4 shadow-sm h-full flex flex-col justify-center">
               <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">Education</span>
               <h4 className="text-sm font-bold text-slate-900 leading-tight">Bachelor of Science in Information Technology</h4>
@@ -249,12 +120,11 @@ export default function Homepage() {
         </div>
       </section>
 
-
       <section id="skills-experience" className="min-h-[80vh] pt-20 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           <div className="lg:col-span-6 flex flex-col">
             <h2 className="text-lg font-display font-bold text-slate-900 mb-4">Expertise & Background</h2>
-            <div className="p-4 border border-double border-gray-300 shadow-lg rounded-md">
+            <div className="p-4 border border-double border-gray-300 shadow-lg rounded-md grow">
               {Techstacks.map((stack, index) => (
                 <div key={index} className={index !== Techstacks.length - 1 ? "mb-4" : ""}>
                   <h3 className="text-sm font-display font-bold mb-2 text-slate-800">
@@ -289,9 +159,9 @@ export default function Homepage() {
               ))}
             </div>
           </div>
-          <div className="lg:col-span-6 flex flex-col">
-            <div className="w-full mt-11">
-              <div className="flex flex-col border border-gray-300 p-5 rounded-md  shadow-lg">
+          <div className="lg:col-span-6 flex flex-col md:mt-11">
+            <div className="w-full">
+              <div className="flex flex-col border border-gray-300 p-5 rounded-md shadow-lg bg-gray-100 grow">
                 {experiencesData.map((exp, index) => {
                   const isEven = index % 2 === 0; 
                   const isLast = index === experiencesData.length - 1; 
@@ -330,10 +200,9 @@ export default function Homepage() {
         </div>
       </section>
 
-
-      <section id="projects" className="min-h-[80vh] pt-28">
+      <section id="projects" className="min-h-[80vh] pt-18">
         <div className="flex flex-row items-center justify-between">
-          <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
+          <h2 className="text-xl font-display font-bold text-slate-900 mb-3">
             Featured Projects
           </h2>
           <a href="/projects" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
@@ -393,68 +262,165 @@ export default function Homepage() {
             </div>
           ))}
         </div>
+        <div className="flex flex-col items-center justify-between w-full">
+          <div className="flex flex-row items-center justify-between w-full max-w-5xl mt-10 px-10 border-b border-gray-200 p-2">
+            <h2 className="text-sm font-display text-slate-900">
+              Github
+            </h2>
+            <h2 className="text-sm font-display italic text-slate-900">
+              @jethermasidong
+            </h2>
+          </div>
+          <GithubHeatmap />
+        </div>
       </section>
 
       <section id="certifications-gallery" className="min-h-[80vh] pt-20 pb-20">
-          <div className="flex flex-col items-center justify-between">
-            <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
+        <div className="flex flex-col items-center justify-between w-full">
+          <div className="flex flex-row items-center justify-between w-full">
+            <h2 className="text-xl font-display font-bold text-slate-900">
               Certifications
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {Certifications.map((cert, index) => (
-                <div 
-                  key={cert.id} 
-                  className={`bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col mt-10 overflow-hidden ${
-                    index === 0 ? '-rotate-3 translate-y-2' : index === 2 ? 'rotate-3 translate-y-2' : ''
-                  }`}
-                >
-                  <div 
-                      key={cert.id} 
-                      className="flex-1 bg-gray-500/20 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow"
-                    >
-                      <div>
-                        <div className="mb-4">
-                          <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50">
-                            {cert.category}
-                          </span>
-                        </div>
-                        <h4 className="font-bold text-sm text-slate-900 mb-2">
-                          {cert.title}
-                        </h4>
-                        <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full">
-                          <img src={cert.logo} alt={`${cert.title} logo`} className="w-4 h-4 object-contain" />
-                          <p className="text-xs text-slate-600">
-                            {cert.issuer}
-                          </p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex flex-row items-center gap-2 mb-2 mt-4 justify-between">
-                        <p className="text-xs text-slate-400 font-medium">
-                          Issued: {cert.date}
-                        </p>
-                        <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
-                          Verify &rarr;
-                        </a>
-                      </div>
+            <a href="/certifications" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
+              All Certifications &rarr;
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {Certifications.map((cert, index) => (
+              <div 
+                key={cert.id} 
+                className="bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col mt-10 overflow-hidden"
+              >
+                <div className="flex-1 bg-gray-500/20 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow">
+                  <div>
+                    <div className="mb-4">
+                      <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50">
+                        {cert.category}
+                      </span>
                     </div>
+                    <h4 className="font-bold text-sm text-slate-900 mb-2">
+                      {cert.title}
+                    </h4>
+                    <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full">
+                      <img src={cert.logo} alt={`${cert.title} logo`} className="w-4 h-4 object-contain" />
+                      <p className="text-xs text-slate-600">
+                        {cert.issuer}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-row items-center gap-2 mb-2 mt-4 justify-between">
+                    <p className="text-xs text-slate-400 font-medium">
+                      Issued: {cert.date}
+                    </p>
+                    <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
+                      Verify &rarr;
+                    </a>
+                  </div>
                 </div>
-              ))}
-            </div>
-            <h2 className="text-xl font-display font-bold text-slate-900 mb-8 mt-20">
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-row items-center justify-between w-full mt-20 mb-8">
+            <h2 className="text-xl font-display font-bold text-slate-900">
               Gallery
             </h2>
+            <div className="flex gap-2">
+              <button 
+                onClick={prevSlide}
+                className="p-2 rounded-full border border-blue-600 hover:bg-slate-100 transition-colors cursor-pointer"
+                aria-label="Previous slide"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button 
+                onClick={nextSlide}
+                className="p-2 rounded-full border border-blue-600 hover:bg-slate-100 transition-colors cursor-pointer"
+                aria-label="Next slide"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
+
+          {galleryItems.length === 0 ? (
+            <p className="text-slate-500 self-start">No images found in the gallery folder.</p>
+          ) : (
+            <div className="relative w-full overflow-hidden py-4">
+              <div className="flex items-center justify-center gap-4 transition-all duration-500 ease-in-out">
+                {[-2, -1, 0, 1, 2].map((offset) => {
+                  const itemIndex = (currentIndex + offset + galleryItems.length) % galleryItems.length;
+                  const item = galleryItems[itemIndex];
+                  const isEdge = Math.abs(offset) === 2;
+                  
+                  return (
+                    <div 
+                      key={`${item.id}-${offset}`}
+                      onClick={() => {
+                        if (offset === 0) setSelectedImage(item.src);
+                        else if (offset > 0) nextSlide();
+                        else prevSlide();
+                      }}
+                      className={`relative aspect-square overflow-hidden rounded-2xl border border-slate-200 shadow-md bg-gray-100 cursor-pointer transition-all duration-500 ${
+                        offset === 0 
+                          ? 'w-1/3 md:w-1/4 z-20 scale-105 shadow-xl opacity-100 filter-none' 
+                          : Math.abs(offset) === 1
+                          ? 'w-1/4 md:w-1/5 z-10 opacity-75 blur-[1px] hover:blur-none'
+                          : 'w-1/5 md:w-1/6 z-0 opacity-40 blur-[3px] hidden md:block'
+                      }`}
+                    >
+                      <img 
+                        src={item.src} 
+                        alt={item.alt} 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
       </section>
 
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm transition-opacity"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-5xl w-full flex flex-col items-center">
+            <button 
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors flex items-center gap-2 cursor-pointer"
+              onClick={() => setSelectedImage(null)}
+            >
+              <span className="text-sm font-medium uppercase tracking-wider">Close</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <img 
+              src={selectedImage} 
+              alt="Preview" 
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()} 
+            />
+          </div>
+        </div>
+      )}
 
       <section id="contact" className="min-h-[80vh] pt-20 pb-20">
-          <div className="flex flex-col items-center justify-between">
-            <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
-              Github Heatmap
-            </h2>
-            <GithubHeatmap />
-          </div>
+        <div className="flex flex-col items-center justify-between">
+          <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
+            Github Heatmap
+          </h2>
+          <GithubHeatmap />
+        </div>
       </section>
     </div>
   );
