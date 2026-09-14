@@ -1,68 +1,54 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Mail, FileBadge, BookImage } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import React from 'react';
 
-export default function Header() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  
-  const [activeHash, setActiveHash] = useState('#home');
+interface HeaderProps {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}
 
+export default function Header({ theme, setTheme }: HeaderProps) {
+  const isDark = theme === 'dark';
 
-  useEffect(() => {
-    if (location.hash) {
-      setActiveHash(location.hash);
-    } else if (location.pathname === '/') {
-      setActiveHash('#home');
-    } 
-  }, [location]);
-
-
-  const handleScroll = (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>,
-    path: string
-  ) => {
-    e.preventDefault();
-
-    if (location.pathname !== '/') {
-    navigate(`/${path}`);
-    return;
-  }
-
-  const targetId = path.replace('#', '');
-  const element = document.getElementById(targetId);
-
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth'});
-    window.history.pushState(null, '', path);
-    setActiveHash(path);
-  }
-};
+  const toggleDarkMode = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   return (
-    <header className="sticky top-4 z-50 mx-auto w-[85%] md:w-1/2 mt-4 border border-slate-200 bg-white/70 backdrop-blur-md shadow-lg rounded-2xl">
+    <header className="sticky top-4 z-50 mx-auto w-[85%] md:w-1/2 mt-4 border border-slate-200 dark:border-white/80 bg-white/70 dark:bg-black/90 backdrop-blur-md shadow-lg rounded-2xl transition-colors duration-300">
       <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-6xl">
-
-        <div className="flex items-center shrink-0 pl-2">
-          <div className="relative inline-block" onClick={(e) => handleScroll(e, '#home')}>
-            <img 
-              src="/profile-online.png" 
-              alt="Jether Profile" 
-              className="w-10 h-10 border border-slate-200 rounded-full object-cover"
-            />  
-            <span className="absolute bottom-0 right-0 block w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
-          </div>
+        <div>
+          Jether.dev
         </div>
         <div className="flex items-center space-x-1 shrink-0">
-          <a 
-            href="mailto:jethermasidong05@gmail.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="p-2 text-slate-600 rounded-lg hover:bg-slate-200 transition-colors"
-            title="Email Me"
+          <button
+            onClick={toggleDarkMode}
+            className="group relative inline-flex items-center justify-center p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-inner transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none cursor-pointer"
+            aria-label="Toggle theme"
           >
-            <Mail className="w-5 h-5 text-slate-500" />
-          </a>
+            <svg
+              className={`w-5 h-5 text-black transition-transform duration-500 absolute ${
+                isDark ? '-rotate-90 scale-0' : 'rotate-0 scale-100'
+              }`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+
+            <svg
+              className={`w-5 h-5 text-blue-600 transition-transform duration-500 absolute ${
+                isDark ? 'rotate-0 scale-100' : 'rotate-90 scale-0'
+              }`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+
+            <span className="absolute inset-0 rounded-xl bg-amber-400/20 dark:bg-indigo-500/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="w-5 h-5 opacity-0" />
+          </button>
         </div>
       </div>
     </header>

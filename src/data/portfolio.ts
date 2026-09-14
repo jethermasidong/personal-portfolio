@@ -1,6 +1,6 @@
 import type { Certification, Project, Experience } from "../types";
 
-export const pageSections = ["home", "skills-experience", "projects", "certifications-gallery", "contact"];
+export const pageSections = ["home", "skills-experience", "projects", "certifications-gallery"];
 
 export const Techstacks = [
     {

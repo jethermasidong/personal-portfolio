@@ -47,20 +47,20 @@ export default function Homepage() {
               <div className="text-5xl md:text-3xl font-display font-extrabold text-slate-900 mb-2 tracking-tight h-auto">
                 <div className="flex flex-row justify-between items-center border border-gray-300 p-5 mb-4">
                   <div className="flex flex-row justify-center items-center gap-1">
-                    <h1 className="text-2xl">Jether Masidong</h1>
+                    <h1 className="text-2xl dark:text-white">Jether Masidong</h1>
                     <img src="verified.png" alt="Profile" className="w-4 h-4 mt-1" />
                   </div>
                   <span className="text-blue-600 text-2xl">Full-Stack Developer</span>
                 </div>
                 <div className="border border-gray-300 p-5 w-157 mt-2 mb-2">
-                  <p className="text-slate-600 text-sm font-extralight tracking-wide">
+                  <p className="text-slate-600 text-sm font-extralight tracking-wide dark:text-white">
                     I am a Full-Stack Developer with experience building web applications, APIs,
                     and scalable systems. At present, I am learning more about emerging technologies 
                     such as blockchain (Web3) and artificial intelligence (AI). I am particularly 
                     interested in these fields because I want to expand my technical skills and explore
                     innovative solutions for real-world problems.
                   </p>
-                  <p className="text-slate-600 text-sm font-extralight tracking-wide mt-1">
+                  <p className="text-slate-600 text-sm font-extralight tracking-wide mt-1 dark:text-white">
                     I am a Full-Stack Developer with experience building web applications, APIs,
                     and scalable systems. At present, I am learning more about emerging technologies 
                     such as blockchain (Web3) and artificial intelligence (AI). I am particularly
@@ -69,19 +69,19 @@ export default function Homepage() {
                 </div>
               </div>
               <div className="flex flex-row items-center gap-3">
-                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1">
+                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1 dark:border-white dark:text-white">
                   <IonIcon name="pin-outline"></IonIcon>
                   <span className="text-xs">Baguio City, Philippines.</span>
                 </div>
-                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1">
+                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1 dark:border-white dark:text-white">
                   <IonIcon name="call-outline"></IonIcon>
                   <span className="text-xs">09622635703</span>
                 </div>
-                <div className="flex flex-row items-center text-black border-blue-600 border w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1">
+                <div className="flex flex-row items-center text-black border-blue-600 border w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
                   <IonIcon name="logo-linkedin"></IonIcon>
                   <span className="text-xs">LinkedIn</span>
                 </div>
-                <a href="" className="flex flex-row items-center border text-black border-blue-600 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1">
+                <a href="" className="flex flex-row items-center border text-black border-blue-600 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
                   <IonIcon name="document-text-outline"></IonIcon>
                   <span className="text-xs">Download CV</span>
                 </a>
@@ -89,31 +89,31 @@ export default function Homepage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 p-4 mt-4 items-center shadow-sm w-full">
-            <div className="md:col-span-5 bg-white border border-slate-200 p-4 shadow-sm h-full flex flex-col justify-center">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">Education</span>
-              <h4 className="text-sm font-bold text-slate-900 leading-tight">Bachelor of Science in Information Technology</h4>
-              <p className="text-xs text-slate-600 mt-1">University of the Cordilleras | 2023 – 2026</p>
+            <div className="md:col-span-5 bg-white border border-slate-200 p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Education</span>
+              <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Bachelor of Science in Information Technology</h4>
+              <p className="text-xs text-slate-600 mt-1 dark:text-white">University of the Cordilleras | 2023 – 2026</p>
             </div>
             <div className="md:col-span-7 grid grid-cols-3 gap-3">
-              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5">
+              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm dark:bg-black">
+                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5 dark:text-white">
                   8+
                 </h4>
-                <p className="text-slate-600 text-sm font-medium mb-2.5">Total Projects</p>
+                <p className="text-slate-600 text-sm font-medium mb-2.5 dark:text-white/50">Total Projects</p>
               </div>
 
-              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5">
+              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm dark:bg-black">
+                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5 dark:text-white">
                   40+
                 </h4>
-                <p className="text-slate-600 text-sm font-medium mb-2.5">Github Repos</p>
+                <p className="text-slate-600 text-sm font-medium mb-2.5 dark:text-white/50">Github Repos</p>
               </div>
               
-              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5">
+              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm dark:bg-black">
+                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5 dark:text-white">
                   33+
                 </h4>
-                <p className="text-slate-600 text-sm font-medium mb-2.5">Tech Stack</p>
+                <p className="text-slate-600 text-sm font-medium mb-2.5 dark:text-white/50">Tech Stack</p>
               </div>
             </div>
           </div>
@@ -123,21 +123,21 @@ export default function Homepage() {
       <section id="skills-experience" className="min-h-[80vh] pt-20 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           <div className="lg:col-span-6 flex flex-col">
-            <h2 className="text-lg font-display font-bold text-slate-900 mb-4 border-b border-gray-300 w-fit">Expertise & Background</h2>
+            <h2 className="text-lg font-display font-bold text-slate-900 mb-4 border-b border-gray-300 w-fit dark:text-white">Expertise & Background</h2>
             <div className="p-4 border border-double border-gray-300 shadow-lg rounded-md grow">
               {Techstacks.map((stack, index) => (
                 <div key={index} className={index !== Techstacks.length - 1 ? "mb-4" : ""}>
-                  <h3 className="text-sm font-display font-bold mb-2 text-slate-800">
+                  <h3 className="text-sm font-display font-bold mb-2 text-slate-800 dark:text-white">
                     {stack.category}
                   </h3>
                   <div className="flex flex-wrap gap-1.5">
                     {stack.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-3 py-1 bg-white text-xs font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center"
+                        className="px-3 py-1 bg-white text-xs font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center dark:bg-black dark:text-white"
                       >
                         {skill.icon && (
-                          <span className="flex items-center text-black text-sm">
+                          <span className="flex items-center text-black text-sm dark:text-white">
                             <IonIcon name={skill.icon}></IonIcon>
                           </span>
                         )}
@@ -161,7 +161,7 @@ export default function Homepage() {
           </div>
           <div className="lg:col-span-6 flex flex-col md:mt-11">
             <div className="w-full">
-              <div className="flex flex-col border border-gray-300 p-5 rounded-md shadow-lg bg-gray-100/50 grow">
+              <div className="flex flex-col border border-gray-300 p-5 rounded-md shadow-lg bg-gray-100/50 grow dark:bg-black">
                 {experiencesData.map((exp, index) => {
                   const isEven = index % 2 === 0; 
                   const isLast = index === experiencesData.length - 1; 
@@ -178,17 +178,17 @@ export default function Homepage() {
 
                       <div className={`relative flex pt-10 ${isEven ? 'justify-start' : 'justify-end'}`}>
                         <div 
-                          className={`absolute top-18 w-3 h-3 rounded-full border-2 bg-white z-10 ${
+                          className={`absolute top-18 w-3 h-3 rounded-full border-2 bg-white dark:bg-black z-10 ${
                             exp.current ? 'border-blue-600 shadow-[0_0_6px_rgba(37,99,235,0.4)]' : 'border-slate-300'
                           } ${isEven ? '-left-1.5' : '-right-1.5'}`}
                         ></div>
 
-                        <div className={`w-[70%] sm:w-[55%] bg-white p-4 rounded-xl border border-slate-200 shadow-sm z-10 hover:shadow-xl transition-shadow ${
+                        <div className={`w-[70%] sm:w-[55%] bg-white dark:bg-black p-4 rounded-xl border border-slate-200 shadow-sm z-10 hover:shadow-xl transition-shadow ${
                           isEven ? 'ml-6 text-left' : 'mr-6 text-right'
                         }`}>
-                          <h3 className="text-sm font-bold text-slate-900 mb-0.5">{exp.role}</h3>
+                          <h3 className="text-sm font-bold text-slate-900 mb-0.5 dark:text-white">{exp.role}</h3>
                           <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-2">{exp.date}</p>
-                          <p className="text-slate-600 text-xs leading-relaxed">{exp.description}</p>
+                          <p className="text-slate-600 text-xs leading-relaxed dark:text-white/50">{exp.description}</p>
                         </div>
                       </div>
                     </div>
@@ -202,7 +202,7 @@ export default function Homepage() {
 
       <section id="projects" className="min-h-[80vh] pt-18">
         <div className="flex flex-row items-center justify-between mb-4">
-          <h2 className="text-xl font-display font-bold text-slate-900 mb-3 border-b border-gray-300">
+          <h2 className="text-xl font-display font-bold text-slate-900 mb-3 border-b border-gray-300 dark:text-white">
             Featured Projects
           </h2>
           <a href="/projects" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
@@ -214,7 +214,7 @@ export default function Homepage() {
           {Projects.map((project, index) => (
             <div 
               key={project.id} 
-              className={`bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
+              className={`bg-gray-100 rounded-2xl border border-slate-200 dark:bg-black shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
                 index === 0 ? '-rotate-3 translate-y-2' : index === 2 ? 'rotate-3 translate-y-2' : ''
               }`}
             >
@@ -230,12 +230,12 @@ export default function Homepage() {
                   {project.title}
                 </h3>
                 
-                <p className="text-slate-600 font-extralight text-sm mb-4 grow">
+                <p className="text-slate-600 font-extralight text-sm mb-4 grow dark:text-white/50">
                   {project.description}
                 </p>
 
                 <div className="flex flex-row items-center justify-between mb-3">
-                  <div className="flex flex-row items-center text-xs gap-1 border text-black border-black/20 rounded-md px-2 py-1 w-fit">
+                  <div className="flex flex-row items-center text-xs gap-1 border text-black border-black/20 rounded-md px-2 py-1 w-fit dark:text-white dark:border-white">
                     <IonIcon name="calendar-outline"></IonIcon>
                     <p>{project.date}</p>
                   </div>
@@ -252,7 +252,7 @@ export default function Homepage() {
                   {project.techStack.map((tech) => (
                     <span 
                       key={tech} 
-                      className="px-3 py-1 text-xs font-medium rounded-full text-black border border-black/20"
+                      className="px-3 py-1 text-xs font-medium rounded-full text-black border border-black/20 dark:text-white dark:border-white"
                     >
                       {tech}
                     </span>
@@ -264,10 +264,10 @@ export default function Homepage() {
         </div>
         <div className="flex flex-col items-center justify-between w-full">
           <div className="flex flex-row items-center justify-between w-full max-w-5xl mt-10 px-10 border-b border-gray-200 p-2">
-            <h2 className="text-sm font-display text-slate-900 font-extralight">
+            <h2 className="text-sm font-display text-slate-900 font-extralight dark:text-white">
               Github
             </h2>
-            <h2 className="text-sm font-display italic text-slate-900">
+            <h2 className="text-sm font-display italic text-slate-900 dark:text-white">
               @jethermasidong
             </h2>
           </div>
@@ -278,7 +278,7 @@ export default function Homepage() {
       <section id="certifications-gallery" className="min-h-[80vh] pt-20 pb-20">
         <div className="flex flex-col items-center justify-between w-full">
           <div className="flex flex-row items-center justify-between w-full mb-4">
-            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300">
+            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300 dark:text-white">
               Certifications
             </h2>
             <a href="/certifications" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
@@ -289,28 +289,28 @@ export default function Homepage() {
             {Certifications.map((cert, _index) => (
               <div 
                 key={cert.id} 
-                className="bg-gray-100/50 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden"
+                className="bg-gray-100/50 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden dark:bg-black"
               >
                 <div className="flex-1 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow">
                   <div>
                     <div className="mb-4">
-                      <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50">
+                      <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50 dark:bg-black">
                         {cert.category}
                       </span>
                     </div>
-                    <h4 className="font-bold text-sm text-slate-900 mb-2">
+                    <h4 className="font-bold text-sm text-slate-900 mb-2 dark:text-white">
                       {cert.title}
                     </h4>
-                    <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full">
+                    <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full dark:text-white dark:border-white">
                       <img src={cert.logo} alt={`${cert.title} logo`} className="w-4 h-4 object-contain" />
-                      <p className="text-xs text-slate-600">
+                      <p className="text-xs text-slate-600 dark:text-white">
                         {cert.issuer}
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex flex-row items-center gap-2 mb-2 mt-4 justify-between">
-                    <p className="text-xs text-slate-400 font-medium">
+                    <p className="text-xs text-slate-400 font-medium dark:text-white/50">
                       Issued: {cert.date}
                     </p>
                     <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
@@ -323,25 +323,25 @@ export default function Homepage() {
           </div>
 
           <div className="flex flex-row items-center justify-between w-full mt-20 mb-8">
-            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300">
+            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300 dark:text-white">
               Gallery
             </h2>
             <div className="flex gap-2">
               <button 
                 onClick={prevSlide}
-                className="p-2 rounded-full border border-blue-600 hover:bg-slate-100 transition-colors cursor-pointer"
+                className="p-2 rounded-full border border-blue-600 transition-transform duration-500 hover:scale-110 cursor-pointer"
                 aria-label="Previous slide"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 dark:text-white text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               <button 
                 onClick={nextSlide}
-                className="p-2 rounded-full border border-blue-600 hover:bg-slate-100 transition-colors cursor-pointer"
+                className="p-2 rounded-full border border-blue-600 transition-transform duration-500 hover:scale-110 cursor-pointer"
                 aria-label="Next slide"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 dark:text-white text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -413,12 +413,14 @@ export default function Homepage() {
         </div>
       )}
 
-      <section id="contact" className="min-h-[80vh] pt-20 pb-20">
-        <div className="flex flex-col items-center justify-between">
-          <h2 className="text-xl font-display font-bold text-slate-900 mb-8">
-            Github Heatmap
+      <section id="contact" className="min-h-[40vh]">
+        <div className="flex flex-col items-start justify-between border border-gray-300 p-5">
+          <h2 className="text-6xl font-display font-extrabold text-slate-900 dark:text-white">
+            Contact Me.
           </h2>
-          <GithubHeatmap />
+          <h2 className="text-4xl font-display font-extrabold text-slate-900 dark:text-white">
+            Let's Connect!
+          </h2>
         </div>
       </section>
     </div>

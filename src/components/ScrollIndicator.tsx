@@ -36,7 +36,7 @@ export default function ScrollIndicator({ sections }: ScrollIndicatorProps) {
           title={`Go to ${id}`}
           className={`h-0.5 transition-all duration-300 ${
             activeSection === id 
-              ? "bg-slate-900 w-8 scale-x-105" 
+              ? "bg-slate-900 w-8 scale-x-105 dark:bg-white" 
               : "bg-slate-300 w-4 hover:w-6 hover:bg-slate-400"
           }`}
         ></a>
