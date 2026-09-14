@@ -26,7 +26,7 @@ export default function Certifications() {
       logo: "src/assets/logo/ibm.png",
       category: "Development",
       issuer: "IBM",
-      link: "",
+      link: "https://www.credly.com/earner/earned/badge/4628e26c-53de-4193-89ea-eddaf3c078e2",
       date: "June 2026"
     },
     {
@@ -35,7 +35,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://coursera.org/verify/MTGS7CD5RGQE",
       date: "August 2026"
     },
     {
@@ -44,7 +44,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/VC3O0FYHM8U3",
       date: "August 2026"
     },
     {
@@ -53,7 +53,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/C44ETAMPEJ0W",
       date: "August 2026"
     },
     {
@@ -62,7 +62,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/81TUBD9U69X6",
       date: "August 2026"
     },
     {
@@ -71,7 +71,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/LXMQVP1O7TAZ",
       date: "Aug 2026"
     },
     {
@@ -80,7 +80,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/JXMP5VCINCU8",
       date: "Aug 2026"
     },
     {
@@ -89,7 +89,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/DPFWUYJAFGV4",
       date: "Aug 2026"
     },
     {
@@ -98,7 +98,7 @@ export default function Certifications() {
       logo: "src/assets/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
-      link: "",
+      link: "https://www.coursera.org/account/accomplishments/records/32X9VUKNW6O7",
       date: "Aug 2026"
     }
   ];
@@ -113,14 +113,14 @@ export default function Certifications() {
 
   return (
     <section id="certifications" className="min-h-[50vh] pt-20 animate-page-in">
-      <h2 className="text-2xl font-display font-bold text-slate-900 mb-8">
+      <h2 className="text-2xl font-display font-bold text-slate-900 mb-8 border-b border-gray-300 w-fit">
         Certifications
       </h2>
       
       <div className="flex flex-col gap-10 w-full pb-10">
         {Object.entries(groupedCertifications).map(([category, certs]) => (
           <div key={category} className="w-full">
-            <h3 className="text-sm font-semibold uppercase text-gray-500 mb-2 pb-1">
+            <h3 className="text-sm font-semibold uppercase text-gray-500 mb-4 pb-1 border-b border-gray-300 w-fit">
               {category}
             </h3>
             
@@ -128,7 +128,7 @@ export default function Certifications() {
               {certs.map((cert) => (
                 <div 
                   key={cert.id} 
-                  className="flex-1 bg-gray-500/20 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow"
+                  className="flex-1 bg-gray-100/50 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow"
                 >
                   <div>
                     <div className="mb-4">

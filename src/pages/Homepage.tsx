@@ -123,7 +123,7 @@ export default function Homepage() {
       <section id="skills-experience" className="min-h-[80vh] pt-20 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           <div className="lg:col-span-6 flex flex-col">
-            <h2 className="text-lg font-display font-bold text-slate-900 mb-4">Expertise & Background</h2>
+            <h2 className="text-lg font-display font-bold text-slate-900 mb-4 border-b border-gray-300 w-fit">Expertise & Background</h2>
             <div className="p-4 border border-double border-gray-300 shadow-lg rounded-md grow">
               {Techstacks.map((stack, index) => (
                 <div key={index} className={index !== Techstacks.length - 1 ? "mb-4" : ""}>
@@ -134,7 +134,7 @@ export default function Homepage() {
                     {stack.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-2.5 py-0.5 bg-white text-xs font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center"
+                        className="px-3 py-1 bg-white text-xs font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center"
                       >
                         {skill.icon && (
                           <span className="flex items-center text-black text-sm">
@@ -161,7 +161,7 @@ export default function Homepage() {
           </div>
           <div className="lg:col-span-6 flex flex-col md:mt-11">
             <div className="w-full">
-              <div className="flex flex-col border border-gray-300 p-5 rounded-md shadow-lg bg-gray-100 grow">
+              <div className="flex flex-col border border-gray-300 p-5 rounded-md shadow-lg bg-gray-100/50 grow">
                 {experiencesData.map((exp, index) => {
                   const isEven = index % 2 === 0; 
                   const isLast = index === experiencesData.length - 1; 
@@ -176,14 +176,14 @@ export default function Homepage() {
                         } ${isLast ? 'border-b-0' : ''}`}
                       ></div>
 
-                      <div className={`relative flex pt-4 ${isEven ? 'justify-start' : 'justify-end'}`}>
+                      <div className={`relative flex pt-10 ${isEven ? 'justify-start' : 'justify-end'}`}>
                         <div 
-                          className={`absolute top-6 w-3 h-3 rounded-full border-2 bg-white z-10 ${
+                          className={`absolute top-18 w-3 h-3 rounded-full border-2 bg-white z-10 ${
                             exp.current ? 'border-blue-600 shadow-[0_0_6px_rgba(37,99,235,0.4)]' : 'border-slate-300'
                           } ${isEven ? '-left-1.5' : '-right-1.5'}`}
                         ></div>
 
-                        <div className={`w-[70%] sm:w-[55%] bg-white p-4 rounded-xl border border-slate-200 shadow-sm z-10 hover:shadow-md transition-shadow ${
+                        <div className={`w-[70%] sm:w-[55%] bg-white p-4 rounded-xl border border-slate-200 shadow-sm z-10 hover:shadow-xl transition-shadow ${
                           isEven ? 'ml-6 text-left' : 'mr-6 text-right'
                         }`}>
                           <h3 className="text-sm font-bold text-slate-900 mb-0.5">{exp.role}</h3>
@@ -201,8 +201,8 @@ export default function Homepage() {
       </section>
 
       <section id="projects" className="min-h-[80vh] pt-18">
-        <div className="flex flex-row items-center justify-between">
-          <h2 className="text-xl font-display font-bold text-slate-900 mb-3">
+        <div className="flex flex-row items-center justify-between mb-4">
+          <h2 className="text-xl font-display font-bold text-slate-900 mb-3 border-b border-gray-300">
             Featured Projects
           </h2>
           <a href="/projects" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
@@ -214,11 +214,11 @@ export default function Homepage() {
           {Projects.map((project, index) => (
             <div 
               key={project.id} 
-              className={`bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col mt-10 overflow-hidden ${
+              className={`bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
                 index === 0 ? '-rotate-3 translate-y-2' : index === 2 ? 'rotate-3 translate-y-2' : ''
               }`}
             >
-              <div className="relative h-56 w-full bg-gray-100 overflow-hidden p-4">
+              <div className="relative h-54 w-full bg-gray-100 overflow-hidden p-4">
                 <img 
                   src={project.image} 
                   alt={`Screenshot of ${project.title}`} 
@@ -264,7 +264,7 @@ export default function Homepage() {
         </div>
         <div className="flex flex-col items-center justify-between w-full">
           <div className="flex flex-row items-center justify-between w-full max-w-5xl mt-10 px-10 border-b border-gray-200 p-2">
-            <h2 className="text-sm font-display text-slate-900">
+            <h2 className="text-sm font-display text-slate-900 font-extralight">
               Github
             </h2>
             <h2 className="text-sm font-display italic text-slate-900">
@@ -277,8 +277,8 @@ export default function Homepage() {
 
       <section id="certifications-gallery" className="min-h-[80vh] pt-20 pb-20">
         <div className="flex flex-col items-center justify-between w-full">
-          <div className="flex flex-row items-center justify-between w-full">
-            <h2 className="text-xl font-display font-bold text-slate-900">
+          <div className="flex flex-row items-center justify-between w-full mb-4">
+            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300">
               Certifications
             </h2>
             <a href="/certifications" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
@@ -286,12 +286,12 @@ export default function Homepage() {
             </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {Certifications.map((cert, index) => (
+            {Certifications.map((cert, _index) => (
               <div 
                 key={cert.id} 
-                className="bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col mt-10 overflow-hidden"
+                className="bg-gray-100/50 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden"
               >
-                <div className="flex-1 bg-gray-500/20 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow">
+                <div className="flex-1 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow">
                   <div>
                     <div className="mb-4">
                       <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50">
@@ -323,7 +323,7 @@ export default function Homepage() {
           </div>
 
           <div className="flex flex-row items-center justify-between w-full mt-20 mb-8">
-            <h2 className="text-xl font-display font-bold text-slate-900">
+            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300">
               Gallery
             </h2>
             <div className="flex gap-2">
@@ -356,7 +356,6 @@ export default function Homepage() {
                 {[-2, -1, 0, 1, 2].map((offset) => {
                   const itemIndex = (currentIndex + offset + galleryItems.length) % galleryItems.length;
                   const item = galleryItems[itemIndex];
-                  const isEdge = Math.abs(offset) === 2;
                   
                   return (
                     <div 

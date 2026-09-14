@@ -75,13 +75,13 @@ export const Projects: Project[] = [
         description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", 
         techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", 
         date: "November 2025", 
-        link: ""
+        link: "https://theverilocal.online"
     },
     { 
         id: 2, 
         title: "UTPRAS Portal", 
         description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", 
-        techStack: [], 
+        techStack: ["Vue", "Node JS", "Express", "PostgreSQL"], 
         image: "src/assets/projects/utpras.png", 
         date: "June 2026", 
         link: ""
@@ -90,10 +90,10 @@ export const Projects: Project[] = [
         id: 3, 
         title: "Recom", 
         description: "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", 
-        techStack: [], 
+        techStack: ["Vue", "Node JS", "Express", "PostgreSQL"], 
         image: "src/assets/projects/recom.png", 
         date: "August 2026", 
-        link: ""
+        link: "https://github.com/jethermasidong/ai-product-discovery-engine"
     }
   ];
 
@@ -146,7 +146,8 @@ export const Certifications: Certification[] = [
         logo: "src/assets/logo/ibm.png",
         category: "Development",
         issuer: "IBM",
-        link: "",
+        link: "https://www.credly.com/earner/earned/badge/4628e26c-53de-4193-89ea-eddaf3c078e2",
         date: "June 2026"
     },
   ];
+

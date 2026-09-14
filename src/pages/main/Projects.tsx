@@ -9,7 +9,7 @@ export default function Projects() {
         description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", 
         techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", 
         date: "November 2025", 
-        link: ""
+        link: "https://theverilocal.online"
     },
     { 
         id: 2, 
@@ -28,7 +28,7 @@ export default function Projects() {
         techStack: ["Vue", "Node JS", "Express", "Google Gemini"], 
         image: "src/assets/projects/recom.png", 
         date: "August 2026", 
-        link: ""
+        link: "https://github.com/jethermasidong/ai-product-discovery-engine"
     },
     { 
         id: 4, 
@@ -38,7 +38,7 @@ export default function Projects() {
         techStack: ["Vue", "Node JS", "Express", "Google Gemini"], 
         image: "src/assets/projects/centre.png", 
         date: "August 2026", 
-        link: ""
+        link: "https://ai-study-assistant-u3sk.onrender.com"
     },
     { 
         id: 5, 
