@@ -47,7 +47,7 @@ export default function Homepage() {
                     <h1 className="text-2xl dark:text-white">Jether Masidong</h1>
                     <img src="verified.png" alt="Profile" className="w-4 h-4 mt-1" />
                   </div>
-                  <span className="text-blue-600 text-2xl">Full-Stack Developer</span>
+                  <span className="text-blue-600 text-2xl dark:text-blue-300">Full-Stack Developer</span>
                 </div>
                 <div className=" p-5 w-157 mb-2">
                   <p className="text-slate-600 text-sm font-extralight tracking-wide dark:text-white">
@@ -72,11 +72,11 @@ export default function Homepage() {
                   <IonIcon name="call-outline"></IonIcon>
                   <span className="text-xs">09622635703</span>
                 </div>
-                <div className="flex flex-row items-center text-black border-blue-600 border-b w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
+                <div className="flex flex-row items-center text-black border-blue-600 dark:border-blue-300 border-b w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
                   <IonIcon name="logo-linkedin"></IonIcon>
                   <span className="text-xs">LinkedIn</span>
                 </div>
-                <a href="" className="flex flex-row items-center border-b text-black border-blue-600 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
+                <a href="" className="flex flex-row items-center border-b text-black border-blue-600 dark:border-blue-300 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
                   <IonIcon name="document-text-outline"></IonIcon>
                   <span className="text-xs">Download CV</span>
                 </a>
@@ -85,22 +85,22 @@ export default function Homepage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 p-4 mt-4 items-center shadow-sm w-full">
             <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Education</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 dark:text-blue-300">Education</span>
               <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Bachelor of Science in Information Technology</h4>
               <p className="text-xs text-slate-600 mt-1 dark:text-white">University of the Cordilleras | 2023 – 2026</p>
             </div>
             <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Recent Training</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 dark:text-blue-300">Recent Training</span>
               <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Data Analytics Level III</h4>
               <p className="text-xs text-slate-600 mt-1 dark:text-white">Blue Phenix Skills Training Center | September 2026</p>
             </div>
             <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Recent Certification</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 dark:text-blue-300">Recent Certification</span>
               <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">NCIII Web Development</h4>
               <p className="text-xs text-slate-600 mt-1 dark:text-white">TESDA | August 2026</p>
             </div>
             <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Current Focus</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 dark:text-blue-300">Current Focus</span>
               <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Full Stack and AI Systems</h4>
               <p className="text-xs text-slate-600 mt-1 dark:text-white">Building scalable web apps & AI integrations</p>
             </div>
@@ -112,7 +112,7 @@ export default function Homepage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           <div className="lg:col-span-6 flex flex-col">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 w-fit mb-5">
-              Expertise & Background<span className="text-blue-600">.</span>
+              Expertise & Background<span className="text-blue-600 dark:text-blue-300">.</span>
             </h2>
             <div className="p-4 rounded-md grow">
               {Techstacks.map((stack, index) => (
@@ -124,20 +124,8 @@ export default function Homepage() {
                     {stack.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
-                        className="px-3 py-1 bg-white text-xs font-medium rounded-full text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center dark:bg-black dark:text-white"
+                        className="px-3 py-1 bg-white text-xs font-medium rounded-md text-slate-600 border border-slate-200 flex flex-row gap-1 items-center justify-center dark:bg-black dark:text-white"
                       >
-                        {skill.icon && (
-                          <span className="flex items-center text-black text-sm dark:text-white">
-                            <IonIcon name={skill.icon}></IonIcon>
-                          </span>
-                        )}
-                        {skill.img && (
-                          <img 
-                            src={skill.img} 
-                            alt={`${skill.name} icon`} 
-                            className="w-3.5 h-3.5 object-contain" 
-                          />
-                        )}
                         {skill.name}
                       </span>
                     ))}
@@ -169,7 +157,7 @@ export default function Homepage() {
                       <div className={`relative flex pt-10 ${isEven ? 'justify-start' : 'justify-end'}`}>
                         <div 
                           className={`absolute top-18 w-3 h-3 rounded-full border-2 bg-white dark:bg-black z-10 ${
-                            exp.current ? 'border-blue-600 shadow-[0_0_6px_rgba(37,99,235,0.4)]' : 'border-slate-300'
+                            exp.current ? 'border-blue-600 dark:border-blue-300 shadow-[0_0_6px_rgba(37,99,235,0.4)]' : 'border-slate-300'
                           } ${isEven ? '-left-1.5' : '-right-1.5'}`}
                         ></div>
 
@@ -177,7 +165,7 @@ export default function Homepage() {
                           isEven ? 'ml-6 text-left' : 'mr-6 text-right'
                         }`}>
                           <h3 className="text-sm font-bold text-slate-900 mb-0.5 dark:text-white">{exp.role}</h3>
-                          <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-2">{exp.date}</p>
+                          <p className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-2 dark:text-blue-300">{exp.date}</p>
                           <p className="text-slate-600 text-xs leading-relaxed dark:text-white/50">{exp.description}</p>
                         </div>
                       </div>
@@ -193,9 +181,9 @@ export default function Homepage() {
       <section id="projects" className="min-h-[60vh] pt-10">
         <div className="flex flex-row items-center justify-between mb-4">
           <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-5">
-              Featured Projects<span className="text-blue-600">.</span>
-            </h2>
-          <a href="/projects" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
+            Featured Projects<span className="text-blue-600 dark:text-blue-300">.</span>
+          </h2>
+          <a href="/projects" className="text-sm text-blue-600 dark:text-blue-300 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
             All Projects &rarr;
           </a>
         </div>
@@ -234,7 +222,7 @@ export default function Homepage() {
                       href={project.link} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs gap-1 border text-blue-600 rounded-md px-2 py-1 w-fit transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
+                      className="text-xs gap-1 border text-blue-600 dark:text-blue-300 rounded-md px-2 py-1 w-fit transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
                       Check &rarr;
                     </a>
                   </div>
@@ -272,9 +260,9 @@ export default function Homepage() {
         <div className="flex flex-col items-center justify-between w-full">
           <div className="flex flex-row items-center justify-between w-full mb-4">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-5">
-              Certifications<span className="text-blue-600">.</span>
+              Certifications<span className="text-blue-600 dark:text-blue-300">.</span>
             </h2>
-            <a href="/certifications" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
+            <a href="/certifications" className="text-sm text-blue-600 dark:text-blue-300 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
               All Certifications &rarr;
             </a>
           </div>
@@ -287,7 +275,7 @@ export default function Homepage() {
                 <div className="flex-1 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow">
                   <div>
                     <div className="mb-4">
-                      <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50 dark:bg-black">
+                      <span className="px-2 py-1 bg-blue-50 text-blue-600 dark:text-blue-300 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50 dark:bg-black">
                         {cert.category}
                       </span>
                     </div>
@@ -306,7 +294,7 @@ export default function Homepage() {
                     <p className="text-xs text-slate-400 font-medium dark:text-white/50">
                       Issued: {cert.date}
                     </p>
-                    <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
+                    <a href={cert.link} className="text-xs text-blue-600 dark:text-blue-300 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
                       Verify &rarr;
                     </a>
                   </div>
@@ -317,12 +305,12 @@ export default function Homepage() {
 
           <div className="flex flex-row items-center justify-between w-full mt-10 mb-8">
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300">
-              Gallery<span className="text-blue-600">.</span>
+              Gallery<span className="text-blue-600 dark:text-blue-300">.</span>
             </h2>
             <div className="flex gap-2">
               <button 
                 onClick={prevSlide}
-                className="p-2 rounded-full border border-blue-600 transition-transform duration-500 hover:scale-110 cursor-pointer"
+                className="p-2 rounded-full border border-blue-600 dark:border-blue-300 transition-transform duration-500 hover:scale-110 cursor-pointer"
                 aria-label="Previous slide"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 dark:text-white text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -331,7 +319,7 @@ export default function Homepage() {
               </button>
               <button 
                 onClick={nextSlide}
-                className="p-2 rounded-full border border-blue-600 transition-transform duration-500 hover:scale-110 cursor-pointer"
+                className="p-2 rounded-full border border-blue-600 dark:border-blue-300 transition-transform duration-500 hover:scale-110 cursor-pointer"
                 aria-label="Next slide"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 dark:text-white text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -410,9 +398,9 @@ export default function Homepage() {
         <div className="flex flex-col p-8 md:p-12 bg-white dark:bg-black w-full transition-colors">
           <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-gray-200 dark:border-gray-800 pb-8 mb-4 gap-4">
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2 block">Get in Touch</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-2 block">Get in Touch</span>
               <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                Contact Me<span className="text-blue-600">.</span>
+                Contact Me<span className="text-blue-600 dark:text-blue-300">.</span>
               </h2>
               <p className="text-sm text-slate-600 dark:text-gray-400 max-w-sm mt-2 mb-5">
                 Open for full-stack development opportunities, collaborations, or discussing new ideas. Let's build something exceptional.

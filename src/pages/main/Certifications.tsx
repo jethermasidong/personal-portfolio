@@ -122,10 +122,10 @@ export default function Certifications() {
 
   return (
     <section id="certifications" className="min-h-[50vh] pt-20 animate-page-in">
-      <h2 className="text-2xl font-display font-bold text-slate-900 mb-8 border-b border-gray-300 w-fit dark:text-white">
-        Certifications
+      <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-5 w-fit">
+        Certifications<span className="text-blue-600 dark:text-blue-300">.</span>
       </h2>
-      
+
       <div className="flex flex-col gap-10 w-full pb-10">
         {Object.entries(groupedCertifications).map(([category, certs]) => (
           <div key={category} className="w-full">
@@ -157,7 +157,7 @@ export default function Certifications() {
                     <p className="text-xs text-slate-400 font-medium dark:text-white/50">
                       Issued: {cert.date}
                     </p>
-                    <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
+                    <a href={cert.link} className="text-xs text-blue-600 dark:text-blue-300 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
                       Verify &rarr;
                     </a>
                   </div>

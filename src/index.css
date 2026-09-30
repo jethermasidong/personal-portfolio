@@ -11,10 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes slideUpEnter {
+@keyframes pageIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
@@ -23,7 +23,7 @@ html {
 }
 
 .animate-page-in {
-  animation: slideUpEnter 0.4s ease-out forwards;
+  animation: pageIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 

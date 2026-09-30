@@ -53,61 +53,68 @@ export default function Projects() {
   ];
 
   return (
-    <section id="certifications" className="min-h-screen pt-20 animate-page-in pb-15">
-      <h2 className="text-2xl font-display font-bold text-slate-900 mb-8">
-        Certifications
-      </h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+    <section id="certifications" className="min-h-screen pt-20 animate-page-in pb-15 w-full">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-6 w-fit">
+          All Projects<span className="text-blue-600 dark:text-blue-300">.</span>
+        </h2>
         
-        {Projects.map((project) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+          {Projects.map((project) => (
             <div 
               key={project.id} 
-              className="bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow flex flex-col overflow-hidden"
+              className="bg-gray-100 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow flex flex-col md:flex-row overflow-hidden dark:bg-black p-5 gap-5 items-center"
             >
-              <div className="relative h-56 w-full bg-gray-100 overflow-hidden p-4">
+              <div className="relative w-full md:w-1/2 h-48 md:h-56 bg-gray-200 dark:bg-gray-900 rounded-xl overflow-hidden shrink-0">
                 <img 
                   src={project.image} 
                   alt={`Screenshot of ${project.title}`} 
-                  className="w-full h-full rounded-lg object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="text-xl font-display font-bold mb-2">
-                  {project.title}
-                </h3>
-                
-                <p className="text-slate-600 font-extralight text-sm mb-4 grow">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-row items-center justify-between mb-3">
-                  <div className="flex flex-row items-center text-xs gap-1 border text-black border-black/20 rounded-md px-2 py-1 w-fit">
-                    <IonIcon name="calendar-outline"></IonIcon>
-                    <p>{project.date}</p>
-                  </div>
-                  <a 
-                    href={project.link} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs gap-1 border text-blue-600 rounded-md px-2 py-1 w-fit transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
-                    Check &rarr;
-                  </a>
+              <div className="flex flex-col justify-between w-full md:w-1/2 h-full py-1">
+                <div>
+                  <h3 className="text-xl font-display font-bold mb-2 text-slate-900 dark:text-white">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-slate-600 dark:text-gray-300 font-extralight text-sm mb-4">
+                    {project.description}
+                  </p>
                 </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <span 
-                      key={tech} 
-                      className="px-3 py-1 text-xs rounded-full text-black border border-black/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+
+                <div>
+                  <div className="flex flex-row items-center justify-between mb-3">
+                    <div className="flex flex-row items-center text-xs gap-1 border text-black border-black/20 rounded-md px-2 py-1 w-fit dark:text-white dark:border-white">
+                      <IonIcon name="calendar-outline"></IonIcon>
+                      <p>{project.date}</p>
+                    </div>
+                    {project.link && (
+                      <a 
+                        href={project.link} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs gap-1 border text-blue-600 dark:text-blue-300 rounded-md px-2 py-1 w-fit transition ease-in-out duration-100 hover:scale-105">
+                        Check &#8599;
+                      </a>
+                    )}
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.techStack.map((tech) => (
+                      <span 
+                        key={tech} 
+                        className="px-2.5 py-0.5 text-[11px] rounded-full text-black border border-black/20 dark:text-white dark:border-white"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
       </div>
     </section>
   );

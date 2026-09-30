@@ -4,8 +4,7 @@ import Layout from './components/Layout';
 import Homepage from './pages/Homepage';
 import Skill from './pages/main/Skills';
 import Projects from './pages/main/Projects';
-import Certifications from './pages/extra/Certifications';
-import Contact from './pages/extra/Contact';
+import Certifications from './pages/main/Certifications';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
           <Route path="/skills" element={<Skill />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/certifications" element={<Certifications />} />
-          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>

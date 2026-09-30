@@ -15,13 +15,28 @@ export default function Header({ theme, setTheme }: HeaderProps) {
   return (
     <header className="sticky top-4 z-50 mx-auto w-[85%] md:w-1/2 mt-4 border border-slate-200 dark:border-white/80 backdrop-blur-md shadow-lg rounded-2xl transition-colors duration-300">
       <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-6xl">
-        <div>
+        <div className="font-extrabold">
           Jether
         </div>
-        <div className="flex flex-row text-xs gap-3 text-blue-600 dark:text-white">
-          <a className="hover:text-black dark:hover:text-blue-600" href="/">Home</a>
-          <a className="hover:text-black dark:hover:text-blue-600" href="/projects">Projects</a>
-          <a className="hover:text-black dark:hover:text-blue-600" href="/certifications">Certifications</a>
+        <div className="flex flex-row text-xs gap-3 text-blue-600 dark:text-blue-300">
+          <a className="hover:text-black dark:hover:text-blue-600" href="/"
+          onMouseEnter={() => {
+          import('../pages/Homepage')
+          }}>
+            Home
+          </a>
+          <a className="hover:text-black dark:hover:text-blue-600" href="/projects" 
+          onMouseEnter={() => {
+          import('../pages/main/Projects')
+          }}>
+            Projects
+          </a>
+          <a className="hover:text-black dark:hover:text-blue-600" href="/certifications"
+          onMouseEnter={() => {
+          import('../pages/main/Certifications')
+          }}>
+            Certifications
+          </a>
           <a className="hover:text-black dark:hover:text-blue-600" href="#certifications-gallery">More</a>
         </div>
         <div className="flex items-center space-x-1 shrink-0">

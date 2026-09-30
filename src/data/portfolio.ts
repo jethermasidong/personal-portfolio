@@ -5,64 +5,64 @@ export const Techstacks = [
     {
         category: "Frontend",
         skills: [
-            { name: "HTML", icon: "logo-html5"},
-            { name: "CSS", icon: "logo-css3"},
-            { name: "Javascript", icon: "logo-javascript"}, 
-            { name: "Typescript", img: "/stack-icons/typescript.png"}, 
-            { name: "React", icon: "logo-react" }, 
-            { name: "Tailwind CSS", img: "/stack-icons/tailwind.png"}, 
-            { name: "Next JS", img: "/stack-icons/nextjs.png"}, 
-            { name: "Vite", img: "/stack-icons/vite.png"},
-            { name: "Vue.js", img: "/stack-icons/vue.png"}
+            { name: "HTML" },
+            { name: "CSS" },
+            { name: "Javascript" }, 
+            { name: "Typescript" }, 
+            { name: "React" }, 
+            { name: "Tailwind CSS" }, 
+            { name: "Next JS" }, 
+            { name: "Vite" },
+            { name: "Vue.js" }
         ]
     },
     {
         category: "Backend",
         skills: [
-            { name: "Node JS", icon: "logo-nodejs" },
-            { name: "Express", img: "/stack-icons/express.png" }, 
-            { name: "REST API", img: "/stack-icons/restapi.png" }, 
-            { name: "PHP", img: "/stack-icons/php.png" }, 
-            { name: "Laravel", icon: "logo-laravel" },
-            { name: "Python", icon: "logo-python" },
+            { name: "Node JS" },
+            { name: "Express" }, 
+            { name: "REST API" }, 
+            { name: "PHP" }, 
+            { name: "Laravel" },
+            { name: "Python" },
         ]
     },
     {
         category: "Database",
         skills: [
-            { name: "MySQL", img: "/stack-icons/mysql.png" },
-            { name: "Postgre SQL", img: "/stack-icons/postgre.png" },
-            { name: "SQLite", img: "/stack-icons/sqlite.png" },
-            { name: "Supabase", img: "/stack-icons/supabase.png" },
+            { name: "MySQL" },
+            { name: "Postgre SQL" },
+            { name: "SQLite" },
+            { name: "Supabase" },
         ]
     },
     {
         category: "AI and Blockchain",
         skills: [
-            { name: "Ethereum", img: "/stack-icons/ethereum.png" },
-            { name: "Solidity", img: "/stack-icons/solidity.png" },
-            { name: "Alchemy", img: "/stack-icons/alchemy.png" }, 
-            { name: "Google Gemini", img: "/stack-icons/gemini.png"},
+            { name: "Ethereum" },
+            { name: "Solidity" },
+            { name: "Alchemy" }, 
+            { name: "Google Gemini" },
         ]
     },
     {
         category: "Cloud & DevOps",
         skills: [
-            { name: "Git", icon: "git-branch-outline" },
-            { name: "Github", icon: "logo-github" },
-            { name: "Cloudinary", img: "/stack-icons/cloudinary.png" }, 
-            { name: "Vercel", img: "/stack-icons/vercel.png"},
-            { name: "Render", img: "/stack-icons/render.png"}, 
+            { name: "Git" },
+            { name: "Github" },
+            { name: "Cloudinary" }, 
+            { name: "Vercel" },
+            { name: "Render" }, 
         ]
     },
     {
         category: "Other Tools",
         skills: [
-            { name: "Postman", img: "/stack-icons/postman.png" },
-            { name: "Figma", icon: "logo-figma" },
-            { name: "Canva", img: "/stack-icons/canva.png" },
-            { name: "Microsoft Tools", img: "/stack-icons/microsoft.png" },
-            { name: "Visual Studio Code", img: "/stack-icons/vscode.png" },
+            { name: "Postman" },
+            { name: "Figma" },
+            { name: "Canva" },
+            { name: "Microsoft Tools" },
+            { name: "Visual Studio Code" },
         ]
     }
   ];
