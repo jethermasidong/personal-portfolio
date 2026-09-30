@@ -8,8 +8,7 @@ const imageModules = import.meta.glob('/src/assets/gallery/*.{png,jpg,jpeg,webp,
 
 const IonIcon = 'ion-icon' as any;
 import GithubHeatmap from "../components/GithubHeatmap";
-import ScrollIndicator from "../components/ScrollIndicator";
-import { Techstacks, Projects, experiencesData, Certifications, pageSections } from "../data/portfolio.ts";
+import { Techstacks, Projects, experiencesData, Certifications } from "../data/portfolio.ts";
 
 export default function Homepage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -37,51 +36,47 @@ export default function Homepage() {
 
   return (
     <div className="flex flex-col gap-20">
-      <ScrollIndicator sections={pageSections} />
-      
-      <section id="home" className="flex flex-col justify-center min-h-[80vh] animate-page-in">
+      <section id="home" className="flex flex-col justify-center min-h-[70vh] animate-page-in">
         <div className="flex flex-col items-center">
           <div className="flex flex-row justify-center items-center">
-            <img src="/profile.png" alt="Profile" className="border px-2 py-2 border-gray-300 w-95 h-102" />
-            <div className="flex flex-col ml-5 border border-gray-300 p-5">
+            <img src="/profile.png" alt="Profile" className="px-2 py-2 w-95 h-102" />
+            <div className="flex flex-col ml-5 p-5">
               <div className="text-5xl md:text-3xl font-display font-extrabold text-slate-900 mb-2 tracking-tight h-auto">
-                <div className="flex flex-row justify-between items-center border border-gray-300 p-5 mb-4">
+                <div className="flex flex-row justify-between items-center p-5">
                   <div className="flex flex-row justify-center items-center gap-1">
                     <h1 className="text-2xl dark:text-white">Jether Masidong</h1>
                     <img src="verified.png" alt="Profile" className="w-4 h-4 mt-1" />
                   </div>
                   <span className="text-blue-600 text-2xl">Full-Stack Developer</span>
                 </div>
-                <div className="border border-gray-300 p-5 w-157 mt-2 mb-2">
+                <div className=" p-5 w-157 mb-2">
                   <p className="text-slate-600 text-sm font-extralight tracking-wide dark:text-white">
-                    I am a Full-Stack Developer with experience building web applications, APIs,
-                    and scalable systems. At present, I am learning more about emerging technologies 
+                    I am a Full-Stack Developer experienced in engineering robust web applications, scalable backend APIs, 
+                    and decentralized systems. I build data-driven platforms and AI-integrated tools using React, Vue, Node.js, 
+                    and PostgreSQL to solve real-world operational challenges.
+                  </p>
+                  <p className="text-slate-600 text-sm font-extralight tracking-wide mt-1 dark:text-white">
+                    At present, I am learning more about emerging technologies 
                     such as blockchain (Web3) and artificial intelligence (AI). I am particularly 
                     interested in these fields because I want to expand my technical skills and explore
                     innovative solutions for real-world problems.
                   </p>
-                  <p className="text-slate-600 text-sm font-extralight tracking-wide mt-1 dark:text-white">
-                    I am a Full-Stack Developer with experience building web applications, APIs,
-                    and scalable systems. At present, I am learning more about emerging technologies 
-                    such as blockchain (Web3) and artificial intelligence (AI). I am particularly
-                    and scalable systems. At present, I am learning more about emerging technologies 
-                  </p>
                 </div>
               </div>
               <div className="flex flex-row items-center gap-3">
-                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1 dark:border-white dark:text-white">
+                <div className="flex flex-row items-center text-black border-black/20 border-b w-fit px-5 py-2 gap-1 dark:border-white dark:text-white">
                   <IonIcon name="pin-outline"></IonIcon>
                   <span className="text-xs">Baguio City, Philippines.</span>
                 </div>
-                <div className="flex flex-row items-center text-black border-black/20 border w-fit px-5 py-2 gap-1 dark:border-white dark:text-white">
+                <div className="flex flex-row items-center text-black border-black/20 border-b w-fit px-5 py-2 gap-1 dark:border-white dark:text-white">
                   <IonIcon name="call-outline"></IonIcon>
                   <span className="text-xs">09622635703</span>
                 </div>
-                <div className="flex flex-row items-center text-black border-blue-600 border w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
+                <div className="flex flex-row items-center text-black border-blue-600 border-b w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
                   <IonIcon name="logo-linkedin"></IonIcon>
                   <span className="text-xs">LinkedIn</span>
                 </div>
-                <a href="" className="flex flex-row items-center border text-black border-blue-600 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
+                <a href="" className="flex flex-row items-center border-b text-black border-blue-600 w-fit px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
                   <IonIcon name="document-text-outline"></IonIcon>
                   <span className="text-xs">Download CV</span>
                 </a>
@@ -89,42 +84,37 @@ export default function Homepage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 p-4 mt-4 items-center shadow-sm w-full">
-            <div className="md:col-span-5 bg-white border border-slate-200 p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
+            <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
               <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Education</span>
               <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Bachelor of Science in Information Technology</h4>
               <p className="text-xs text-slate-600 mt-1 dark:text-white">University of the Cordilleras | 2023 – 2026</p>
             </div>
-            <div className="md:col-span-7 grid grid-cols-3 gap-3">
-              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm dark:bg-black">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5 dark:text-white">
-                  8+
-                </h4>
-                <p className="text-slate-600 text-sm font-medium mb-2.5 dark:text-white/50">Total Projects</p>
-              </div>
-
-              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm dark:bg-black">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5 dark:text-white">
-                  40+
-                </h4>
-                <p className="text-slate-600 text-sm font-medium mb-2.5 dark:text-white/50">Github Repos</p>
-              </div>
-              
-              <div className="bg-white border border-slate-200 p-3 flex flex-col items-center justify-center text-center shadow-sm dark:bg-black">
-                <h4 className="text-xl font-display font-bold text-slate-900 mb-0.5 mt-2.5 dark:text-white">
-                  33+
-                </h4>
-                <p className="text-slate-600 text-sm font-medium mb-2.5 dark:text-white/50">Tech Stack</p>
-              </div>
+            <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Recent Training</span>
+              <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Data Analytics Level III</h4>
+              <p className="text-xs text-slate-600 mt-1 dark:text-white">Blue Phenix Skills Training Center | September 2026</p>
+            </div>
+            <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Recent Certification</span>
+              <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">NCIII Web Development</h4>
+              <p className="text-xs text-slate-600 mt-1 dark:text-white">TESDA | August 2026</p>
+            </div>
+            <div className="md:col-span-3 bg-white p-4 shadow-sm h-full flex flex-col justify-center dark:bg-black">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 ">Current Focus</span>
+              <h4 className="text-sm font-bold text-slate-900 leading-tight dark:text-white">Full Stack and AI Systems</h4>
+              <p className="text-xs text-slate-600 mt-1 dark:text-white">Building scalable web apps & AI integrations</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="skills-experience" className="min-h-[80vh] pt-20 flex flex-col justify-center">
+      <section id="skills-experience" className="min-h-[60vh] flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           <div className="lg:col-span-6 flex flex-col">
-            <h2 className="text-lg font-display font-bold text-slate-900 mb-4 border-b border-gray-300 w-fit dark:text-white">Expertise & Background</h2>
-            <div className="p-4 border border-double border-gray-300 shadow-lg rounded-md grow">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 w-fit mb-5">
+              Expertise & Background<span className="text-blue-600">.</span>
+            </h2>
+            <div className="p-4 rounded-md grow">
               {Techstacks.map((stack, index) => (
                 <div key={index} className={index !== Techstacks.length - 1 ? "mb-4" : ""}>
                   <h3 className="text-sm font-display font-bold mb-2 text-slate-800 dark:text-white">
@@ -161,7 +151,7 @@ export default function Homepage() {
           </div>
           <div className="lg:col-span-6 flex flex-col md:mt-11">
             <div className="w-full">
-              <div className="flex flex-col border border-gray-300 p-5 rounded-md shadow-lg bg-gray-100/50 grow dark:bg-black">
+              <div className="flex flex-col p-5 grow dark:bg-black">
                 {experiencesData.map((exp, index) => {
                   const isEven = index % 2 === 0; 
                   const isLast = index === experiencesData.length - 1; 
@@ -200,67 +190,69 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section id="projects" className="min-h-[80vh] pt-18">
+      <section id="projects" className="min-h-[60vh] pt-10">
         <div className="flex flex-row items-center justify-between mb-4">
-          <h2 className="text-xl font-display font-bold text-slate-900 mb-3 border-b border-gray-300 dark:text-white">
-            Featured Projects
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-5">
+              Featured Projects<span className="text-blue-600">.</span>
+            </h2>
           <a href="/projects" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
             All Projects &rarr;
           </a>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {Projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className={`bg-gray-100 rounded-2xl border border-slate-200 dark:bg-black shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden ${
-                index === 0 ? '-rotate-3 translate-y-2' : index === 2 ? 'rotate-3 translate-y-2' : ''
-              }`}
-            >
-              <div className="relative h-54 w-full bg-gray-100 overflow-hidden p-4">
-                <img 
-                  src={project.image} 
-                  alt={`Screenshot of ${project.title}`} 
-                  className="w-full h-full rounded-lg object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5 flex flex-col grow">
-                <h3 className="text-xl font-display font-bold mb-2">
-                  {project.title}
-                </h3>
-                
-                <p className="text-slate-600 font-extralight text-sm mb-4 grow dark:text-white/50">
-                  {project.description}
-                </p>
+        <div className="relative w-full overflow-hidden py-4 space-y-6">
+          <div className="absolute top-0 bottom-0 left-0 w-16 md:w-24 bg-linear-to-r from-white dark:from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-16 md:w-24 bg-linear-to-l from-white dark:from-black to-transparent z-10 pointer-events-none" />
+          <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused] gap-6">
+            {[...Projects, ...Projects].map((project, index) => (
+              <div 
+                key={`row1-${project.id}-${index}`} 
+                className="w-75 md:w-87.5 shrink-0 bg-gray-100 rounded-2xl border border-slate-200 dark:bg-black shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden"
+              >
+                <div className="relative h-48 w-full bg-gray-100 overflow-hidden p-4">
+                  <img 
+                    src={project.image} 
+                    alt={`Screenshot of ${project.title}`} 
+                    className="w-full h-full rounded-lg object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5 flex flex-col grow">
+                  <h3 className="text-xl font-display font-bold mb-2">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-slate-600 font-extralight text-sm mb-4 grow dark:text-white/50 line-clamp-3">
+                    {project.description}
+                  </p>
 
-                <div className="flex flex-row items-center justify-between mb-3">
-                  <div className="flex flex-row items-center text-xs gap-1 border text-black border-black/20 rounded-md px-2 py-1 w-fit dark:text-white dark:border-white">
-                    <IonIcon name="calendar-outline"></IonIcon>
-                    <p>{project.date}</p>
+                  <div className="flex flex-row items-center justify-between mb-3">
+                    <div className="flex flex-row items-center text-xs gap-1 border text-black border-black/20 rounded-md px-2 py-1 w-fit dark:text-white dark:border-white">
+                      <IonIcon name="calendar-outline"></IonIcon>
+                      <p>{project.date}</p>
+                    </div>
+                    <a 
+                      href={project.link} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs gap-1 border text-blue-600 rounded-md px-2 py-1 w-fit transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
+                      Check &rarr;
+                    </a>
                   </div>
-                  <a 
-                    href={project.link} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs gap-1 border text-blue-600 rounded-md px-2 py-1 w-fit transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
-                    Check &rarr;
-                  </a>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <span 
-                      key={tech} 
-                      className="px-3 py-1 text-xs font-medium rounded-full text-black border border-black/20 dark:text-white dark:border-white"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.map((tech) => (
+                      <span 
+                        key={tech} 
+                        className="px-3 py-1 text-xs font-medium rounded-full text-black border border-black/20 dark:text-white dark:border-white"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div className="flex flex-col items-center justify-between w-full">
           <div className="flex flex-row items-center justify-between w-full max-w-5xl mt-10 px-10 border-b border-gray-200 p-2">
@@ -275,11 +267,12 @@ export default function Homepage() {
         </div>
       </section>
 
-      <section id="certifications-gallery" className="min-h-[80vh] pt-20 pb-20">
+
+      <section id="certifications-gallery" className="min-h-[60vh] pt-10 pb-20">
         <div className="flex flex-col items-center justify-between w-full">
           <div className="flex flex-row items-center justify-between w-full mb-4">
-            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300 dark:text-white">
-              Certifications
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-5">
+              Certifications<span className="text-blue-600">.</span>
             </h2>
             <a href="/certifications" className="text-sm text-blue-600 px-3 hover:text-blue-300 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">
               All Certifications &rarr;
@@ -322,9 +315,9 @@ export default function Homepage() {
             ))}
           </div>
 
-          <div className="flex flex-row items-center justify-between w-full mt-20 mb-8">
-            <h2 className="text-xl font-display font-bold text-slate-900 border-b border-gray-300 dark:text-white">
-              Gallery
+          <div className="flex flex-row items-center justify-between w-full mt-10 mb-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300">
+              Gallery<span className="text-blue-600">.</span>
             </h2>
             <div className="flex gap-2">
               <button 
@@ -413,14 +406,40 @@ export default function Homepage() {
         </div>
       )}
 
-      <section id="contact" className="min-h-[40vh]">
-        <div className="flex flex-col items-start justify-between border border-gray-300 p-5">
-          <h2 className="text-6xl font-display font-extrabold text-slate-900 dark:text-white">
-            Contact Me.
-          </h2>
-          <h2 className="text-4xl font-display font-extrabold text-slate-900 dark:text-white">
-            Let's Connect!
-          </h2>
+      <section id="contact" className="min-h-[10vh] py-12">
+        <div className="flex flex-col p-8 md:p-12 bg-white dark:bg-black w-full transition-colors">
+          <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-gray-200 dark:border-gray-800 pb-8 mb-4 gap-4">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-2 block">Get in Touch</span>
+              <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Contact Me<span className="text-blue-600">.</span>
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-gray-400 max-w-sm mt-2 mb-5">
+                Open for full-stack development opportunities, collaborations, or discussing new ideas. Let's build something exceptional.
+              </p>
+            </div>
+            <div className="flex flex-col text-md text-black dark:text-white">
+              <div className="flex flex-row items-center gap-1">
+                <IonIcon name="mail-outline"></IonIcon>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:jethermasidong05@gmail.com" className="hover:text-blue-600 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">Email &#8599; </a>
+              </div>
+              <div className="flex flex-row items-center gap-1">
+                <IonIcon name="logo-linkedin"></IonIcon>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jethermasidong/" className="hover:text-blue-600 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">LinkedIn &#8599; </a>
+              </div>
+              <div className="flex flex-row items-center gap-1">
+                <IonIcon name="logo-github"></IonIcon>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/jethermasidong" className="hover:text-blue-600 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">Github &#8599; </a>
+              </div>
+              <div className="flex flex-row items-center gap-1">
+                <IonIcon name="logo-facebook"></IonIcon>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/jetherjet.masidong" className="hover:text-blue-600 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1">Facebook &#8599; </a>
+              </div>
+            </div>
+          </div>
+          <div className="justify-center flex flex-row text-sm italic">
+            <p>Copyright @2026. Jether Masidong</p>
+          </div>
         </div>
       </section>
     </div>

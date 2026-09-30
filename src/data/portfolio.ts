@@ -1,6 +1,5 @@
 import type { Certification, Project, Experience } from "../types";
 
-export const pageSections = ["home", "skills-experience", "projects", "certifications-gallery"];
 
 export const Techstacks = [
     {
@@ -102,21 +101,21 @@ export const experiencesData: Experience[] = [
         id: 1,
         role: "Freelance Fullstack Developer",
         date: "August 2026 - Present",
-        description: "",
+        description: "Freelance Full-Stack Developer currently available for new projects, specializing in modern web applications, scalable APIs, and AI integrations.",
         current: true, 
     },
     {
         id: 2,
-        role: "Web Developer",
+        role: "Web Developer Intern",
         date: "June - August 2026",
-        description: "Developed a web application for TESDA CAR Regional Office.",
+        description: "Developed a google sheet and web application project for TESDA CAR Regional Office.",
         current: false, 
     },
     {
         id: 3,
         role: "First Hello World!",
-        date: "Aug 2023",
-        description: "Executed commission-based graphic design projects.",
+        date: "August 2023 - August 2026",
+        description: "Executed commission-based graphic design projects and learn about full stack web development.",
         current: false, 
     },
   ];
@@ -142,12 +141,12 @@ export const Certifications: Certification[] = [
     },
     {
         id: 3,
-        title: "Web Development Fundamentals",
-        logo: "src/assets/logo/ibm.png",
-        category: "Development",
-        issuer: "IBM",
-        link: "https://www.credly.com/earner/earned/badge/4628e26c-53de-4193-89ea-eddaf3c078e2",
-        date: "June 2026"
+        title: "Data Analytics Level III",
+        logo: "src/assets/logo/tesda.png",
+        category: "Data Analytics",
+        issuer: "Blue Phenix TC / TESDA",
+        link: "",
+        date: "September 2026"  
     },
   ];
 

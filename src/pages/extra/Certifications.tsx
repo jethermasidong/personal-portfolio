@@ -100,6 +100,15 @@ export default function Certifications() {
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/32X9VUKNW6O7",
       date: "Aug 2026"
+    },
+    {
+      id: 12,
+      title: "Data Analytics Level III",
+      logo: "src/assets/logo/tesda.png",
+      category: "Data Analytics",
+      issuer: "Blue Phenix TC / TESDA",
+      link: "",
+      date: "September 2026"  
     }
   ];
 
@@ -113,14 +122,14 @@ export default function Certifications() {
 
   return (
     <section id="certifications" className="min-h-[50vh] pt-20 animate-page-in">
-      <h2 className="text-2xl font-display font-bold text-slate-900 mb-8 border-b border-gray-300 w-fit">
+      <h2 className="text-2xl font-display font-bold text-slate-900 mb-8 border-b border-gray-300 w-fit dark:text-white">
         Certifications
       </h2>
       
       <div className="flex flex-col gap-10 w-full pb-10">
         {Object.entries(groupedCertifications).map(([category, certs]) => (
           <div key={category} className="w-full">
-            <h3 className="text-sm font-semibold uppercase text-gray-500 mb-4 pb-1 border-b border-gray-300 w-fit">
+            <h3 className="text-sm font-semibold uppercase text-gray-500 mb-4 pb-1 border-b border-gray-300 w-fit dark:text-white/50">
               {category}
             </h3>
             
@@ -128,27 +137,24 @@ export default function Certifications() {
               {certs.map((cert) => (
                 <div 
                   key={cert.id} 
-                  className="flex-1 bg-gray-100/50 p-6 rounded-2xl border border-black/20 shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow"
+                  className="flex-1 bg-gray-100/50 p-6 rounded-2xl border border-black/20 dark:bg-black dark:border-white shadow-sm flex flex-col justify-between hover:shadow-lg transition-shadow"
                 >
                   <div>
                     <div className="mb-4">
-                      <span className="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-wider rounded-md border border-blue-500/50">
-                        {cert.category}
-                      </span>
                     </div>
-                    <h4 className="font-bold text-sm text-slate-900 mb-2">
+                    <h4 className="font-bold text-sm text-slate-900 mb-2 dark:text-white">
                       {cert.title}
                     </h4>
-                    <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full">
+                    <div className="flex flex-row items-center gap-2 border border-black/20 px-3 py-1 w-fit rounded-full dark:border-white">
                       <img src={cert.logo} alt={`${cert.title} logo`} className="w-4 h-4 object-contain" />
-                      <p className="text-xs text-slate-600">
+                      <p className="text-xs text-slate-600 dark:text-white">
                         {cert.issuer}
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex flex-row items-center gap-2 mb-2 mt-4 justify-between">
-                    <p className="text-xs text-slate-400 font-medium">
+                    <p className="text-xs text-slate-400 font-medium dark:text-white/50">
                       Issued: {cert.date}
                     </p>
                     <a href={cert.link} className="text-xs text-blue-600 font-medium transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 cursor-pointer">
