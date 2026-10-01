@@ -7,7 +7,7 @@ export default function Projects() {
         id: 1, 
         title: "Verilocal", 
         description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", 
-        techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", 
+        techStack: ["React", "Node JS", "Express", "MYSQL"], image: "/projects/verilocal.png", 
         date: "November 2025", 
         link: "https://theverilocal.online"
     },
@@ -16,7 +16,7 @@ export default function Projects() {
         title: "UTPRAS Portal", 
         description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", 
         techStack: ["Vue", "Node JS", "Express", "PostgreSQL"], 
-        image: "src/assets/projects/utpras.png", 
+        image: "/projects/utpras.png", 
         date: "June 2026", 
         link: ""
     },
@@ -26,7 +26,7 @@ export default function Projects() {
         description: 
         "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", 
         techStack: ["Vue", "Node JS", "Express", "Google Gemini"], 
-        image: "src/assets/projects/recom.png", 
+        image: "/projects/recom.png", 
         date: "August 2026", 
         link: "https://github.com/jethermasidong/ai-product-discovery-engine"
     },
@@ -36,7 +36,7 @@ export default function Projects() {
         description: 
         "An AI Study Assistant that i developed using Google Gemini Free Tier Model", 
         techStack: ["Vue", "Node JS", "Express", "Google Gemini"], 
-        image: "src/assets/projects/centre.png", 
+        image: "/projects/centre.png", 
         date: "August 2026", 
         link: "https://ai-study-assistant-u3sk.onrender.com"
     },
@@ -46,7 +46,7 @@ export default function Projects() {
         description: 
         "Polling/Voting System that will enhance electoral/voting transparency and integrity with the help of blockchain.", 
         techStack: ["React", "Node JS", "Express", "PostgreSQL"], 
-        image: "src/assets/projects/protekboto.png", 
+        image: "/projects/protekboto.png", 
         date: "Feb 2026", 
         link: ""
     },

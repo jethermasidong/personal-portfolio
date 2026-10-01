@@ -5,7 +5,7 @@ export default function Certifications() {
     {
       id: 1,
       title: "NCIII Web Development",
-      logo: "src/assets/logo/tesda.png",
+      logo: "/logo/tesda.png",
       category: "Development",
       issuer: "TESDA",
       link: "",
@@ -14,7 +14,7 @@ export default function Certifications() {
     {
       id: 2,
       title: "AI Professional Certificate",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://coursera.org/share/dd0fdb0ef228eba17f58a6adaf730246",
@@ -23,7 +23,7 @@ export default function Certifications() {
     {
       id: 3,
       title: "Web Development Fundamentals",
-      logo: "src/assets/logo/ibm.png",
+      logo: "/logo/ibm.png",
       category: "Development",
       issuer: "IBM",
       link: "https://www.credly.com/earner/earned/badge/4628e26c-53de-4193-89ea-eddaf3c078e2",
@@ -32,7 +32,7 @@ export default function Certifications() {
     {
       id: 4,
       title: "AI Fundamentals",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://coursera.org/verify/MTGS7CD5RGQE",
@@ -41,7 +41,7 @@ export default function Certifications() {
     {
       id: 5,
       title: "AI for App Building",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/VC3O0FYHM8U3",
@@ -50,7 +50,7 @@ export default function Certifications() {
     {
       id: 6,
       title: "AI for App Deployment",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/C44ETAMPEJ0W",
@@ -59,7 +59,7 @@ export default function Certifications() {
     {
       id: 7,
       title: "AI For Brainstorming and Planning",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/81TUBD9U69X6",
@@ -68,7 +68,7 @@ export default function Certifications() {
     {
       id: 8,
       title: "AI for Data Analysis",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/LXMQVP1O7TAZ",
@@ -77,7 +77,7 @@ export default function Certifications() {
     {
       id: 9,
       title: "AI for Research and Insights",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/JXMP5VCINCU8",
@@ -86,7 +86,7 @@ export default function Certifications() {
     {
       id: 10,
       title: "AI for Writing and Communicating",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/DPFWUYJAFGV4",
@@ -95,7 +95,7 @@ export default function Certifications() {
     {
       id: 11,
       title: "AI for Content Creation",
-      logo: "src/assets/logo/google.png",
+      logo: "/logo/google.png",
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/32X9VUKNW6O7",
@@ -104,7 +104,7 @@ export default function Certifications() {
     {
       id: 12,
       title: "Data Analytics Level III",
-      logo: "src/assets/logo/tesda.png",
+      logo: "/logo/tesda.png",
       category: "Data Analytics",
       issuer: "Blue Phenix TC / TESDA",
       link: "",

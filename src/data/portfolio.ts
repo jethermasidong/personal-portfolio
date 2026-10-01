@@ -72,7 +72,7 @@ export const Projects: Project[] = [
         id: 1, 
         title: "Verilocal", 
         description: "Blockchain Product Verification Strengthening Artisan's Brand Identity and Integrity.", 
-        techStack: ["React", "Node JS", "Express", "MYSQL"], image: "src/assets/projects/verilocal.png", 
+        techStack: ["React", "Node JS", "Express", "MYSQL"], image: "/projects/verilocal.png", 
         date: "November 2025", 
         link: "https://theverilocal.online"
     },
@@ -81,7 +81,7 @@ export const Projects: Project[] = [
         title: "UTPRAS Portal", 
         description: "UTPRAS Program Compliance Portal for CAR Regional and Provincial Offices.", 
         techStack: ["Vue", "Node JS", "Express", "PostgreSQL"], 
-        image: "src/assets/projects/utpras.png", 
+        image: "/projects/utpras.png", 
         date: "June 2026", 
         link: ""
     },
@@ -90,7 +90,7 @@ export const Projects: Project[] = [
         title: "Recom", 
         description: "An AI Product Discovery Engine that will help online shoppers to lessen their search time, decision fatigue, and shopping friction.", 
         techStack: ["Vue", "Node JS", "Express", "PostgreSQL"], 
-        image: "src/assets/projects/recom.png", 
+        image: "/projects/recom.png", 
         date: "August 2026", 
         link: "https://github.com/jethermasidong/ai-product-discovery-engine"
     }
@@ -124,7 +124,7 @@ export const Certifications: Certification[] = [
     {
         id: 1,
         title: "NCIII Web Development",
-        logo: "src/assets/logo/tesda.png",
+        logo: "/logo/tesda.png",
         category: "Development",
         issuer: "TESDA",
         link: "",
@@ -133,7 +133,7 @@ export const Certifications: Certification[] = [
     {
         id: 2,
         title: "AI Professional Certificate",
-        logo: "src/assets/logo/google.png",
+        logo: "/logo/google.png",
         category: "AI",
         issuer: "Google Coursera",
         link: "https://coursera.org/share/dd0fdb0ef228eba17f58a6adaf730246",
@@ -142,7 +142,7 @@ export const Certifications: Certification[] = [
     {
         id: 3,
         title: "Data Analytics Level III",
-        logo: "src/assets/logo/tesda.png",
+        logo: "/logo/tesda.png",
         category: "Data Analytics",
         issuer: "Blue Phenix TC / TESDA",
         link: "",
