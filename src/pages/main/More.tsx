@@ -1,5 +1,4 @@
 import type { Contact } from '../../types/index';
-const IonIcon = 'ion-icon' as any;
 
 export default function More() {
   const Contacts: Contact[] = [
