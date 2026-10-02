@@ -55,9 +55,14 @@ export default function Projects() {
   return (
     <section id="certifications" className="min-h-screen pt-20 animate-page-in pb-15 w-full">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-6 w-fit">
-          All Projects<span className="text-blue-600 dark:text-blue-300">.</span>
-        </h2>
+        <div>
+          <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-1 block">All of my projects</span>
+          <div className="border-b border-gray-300 mb-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-5">
+              Projects<span className="text-blue-600 dark:text-blue-300">.</span>
+            </h2>
+          </div>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
           {Projects.map((project) => (

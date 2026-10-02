@@ -399,8 +399,8 @@ export default function Homepage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-gray-200 dark:border-gray-800 pb-8 mb-4 gap-4">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-2 block">Get in Touch</span>
-              <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                Contact Me<span className="text-blue-600 dark:text-blue-300">.</span>
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Jether Masidong<span className="text-blue-600 dark:text-blue-300">.</span>
               </h2>
               <p className="text-sm text-slate-600 dark:text-gray-400 max-w-sm mt-2 mb-5">
                 Open for full-stack development opportunities, collaborations, or discussing new ideas. Let's build something exceptional.

@@ -72,7 +72,7 @@ export default function Certifications() {
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/LXMQVP1O7TAZ",
-      date: "Aug 2026"
+      date: "August 2026"
     },
     {
       id: 9,
@@ -81,7 +81,7 @@ export default function Certifications() {
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/JXMP5VCINCU8",
-      date: "Aug 2026"
+      date: "August 2026"
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ export default function Certifications() {
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/DPFWUYJAFGV4",
-      date: "Aug 2026"
+      date: "August 2026"
     },
     {
       id: 11,
@@ -99,7 +99,7 @@ export default function Certifications() {
       category: "AI",
       issuer: "Google Coursera",
       link: "https://www.coursera.org/account/accomplishments/records/32X9VUKNW6O7",
-      date: "Aug 2026"
+      date: "August 2026"
     },
     {
       id: 12,
@@ -122,9 +122,14 @@ export default function Certifications() {
 
   return (
     <section id="certifications" className="min-h-[50vh] pt-20 animate-page-in">
-      <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white border-b border-gray-300 mb-5 w-fit">
-        Certifications<span className="text-blue-600 dark:text-blue-300">.</span>
-      </h2>
+      <div>
+        <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-1 block">Professional Certification</span>
+        <div className="border-b border-gray-300 mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-5">
+            Certifications<span className="text-blue-600 dark:text-blue-300">.</span>
+          </h2>
+        </div>
+      </div>
 
       <div className="flex flex-col gap-10 w-full pb-10">
         {Object.entries(groupedCertifications).map(([category, certs]) => (

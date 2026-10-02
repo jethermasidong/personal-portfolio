@@ -25,3 +25,11 @@ export interface Experience {
   description: string;
   current: boolean;
 }
+
+export interface Contact {
+  id: number;
+  name: string;
+  description: string;
+  social: string;
+  link: string;
+}
