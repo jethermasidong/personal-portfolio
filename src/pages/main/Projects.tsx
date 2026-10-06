@@ -1,4 +1,5 @@
 import type { Project } from '../../types/index';
+import { Helmet } from 'react-helmet-async';
 const IonIcon = 'ion-icon' as any;
 
 export default function Projects() {
@@ -82,6 +83,12 @@ export default function Projects() {
 
   return (
     <section id="certifications" className="min-h-screen pt-20 animate-page-in pb-15 w-full">
+
+      <Helmet>
+        <title>Web, AI, & Blockchain Projects</title>
+        <meta name="description" content="Explore web apps, AI tools, and blockchain projects built by Jether." />
+      </Helmet>
+
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div>
           <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-1 block">All of my projects</span>

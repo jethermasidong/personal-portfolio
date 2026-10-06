@@ -1,4 +1,5 @@
 import type { Certification } from '../../types/index';
+import { Helmet } from 'react-helmet-async';
 
 export default function Certifications() {
   const certificationsData: Certification[] = [
@@ -122,6 +123,12 @@ export default function Certifications() {
 
   return (
     <section id="certifications" className="min-h-[50vh] pt-20 animate-page-in">
+
+      <Helmet>
+        <title>AI, Web, Data Analytics Certifications</title>
+        <meta name="description" content="Explore web, AI, and other certifications acquired by Jether." />
+      </Helmet>
+
       <div>
         <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-1 block">Professional Certification</span>
         <div className="border-b border-gray-300 mb-10">

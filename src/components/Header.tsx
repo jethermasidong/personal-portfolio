@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeaderProps {
   theme: string;
@@ -13,48 +14,48 @@ export default function Header({ theme, setTheme }: HeaderProps) {
   };
 
   return (
-    <header className="sticky top-4 z-50 mx-auto w-[92%] md:w-1/2 mt-4 border border-slate-200 dark:border-white/80 backdrop-blur-md shadow-lg rounded-2xl transition-colors duration-300">
+    <header className="sticky top-4 z-50 mx-auto w-[92%] md:w-1/2 mt-4 rounded-2xl transition-colors duration-300">
       <div className="flex items-center justify-between px-3 md:px-4 py-2.5 mx-auto max-w-6xl">
         
-        <div className="font-extrabold text-sm md:text-base text-slate-900 dark:text-white">
+        <div className="font-bold text-sm md:text-lg text-slate-900 dark:text-white">
           Jether
         </div>
 
-        <div className="flex flex-row text-[11px] sm:text-xs gap-2 sm:gap-4 text-blue-600 dark:text-blue-300 font-medium">
-          <a 
+        <div className="flex flex-row text-[12px] sm:text-xs gap-2 sm:gap-4 text-blue-600 dark:text-blue-300 font-medium">
+          <Link
             className="hover:text-black dark:hover:text-blue-600 transition-colors" 
-            href="/"
+            to="/"
             onMouseEnter={() => import('../pages/Homepage')}
           >
             Home
-          </a>
-          <a 
+          </Link>
+          <Link
             className="hover:text-black dark:hover:text-blue-600 transition-colors" 
-            href="/projects" 
+            to="/projects" 
             onMouseEnter={() => import('../pages/main/Projects')}
           >
             Projects
-          </a>
-          <a 
+          </Link>
+          <Link
             className="hover:text-black dark:hover:text-blue-600 transition-colors" 
-            href="/certifications"
+            to="/certifications"
             onMouseEnter={() => import('../pages/main/Certifications')}
           >
             Certifications
-          </a>
-          <a 
+          </Link>
+          <Link
             className="hover:text-black dark:hover:text-blue-600 transition-colors" 
-            href="/more"
+            to="/more"
             onMouseEnter={() => import('../pages/main/More')}
           >
             More
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center shrink-0">
           <button
             onClick={toggleDarkMode}
-            className="group relative inline-flex items-center justify-center p-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-inner transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none cursor-pointer"
+            className="group relative inline-flex items-center justify-center p-2 rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none cursor-pointer"
             aria-label="Toggle theme"
           >
             <svg

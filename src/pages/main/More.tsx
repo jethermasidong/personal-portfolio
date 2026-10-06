@@ -1,4 +1,5 @@
 import type { Contact } from '../../types/index';
+import { Helmet } from 'react-helmet-async';
 
 export default function More() {
   const Contacts: Contact[] = [
@@ -34,6 +35,12 @@ export default function More() {
 
   return (
     <section id="more" className="min-h-screen pt-20 animate-page-in pb-16 w-full">
+
+      <Helmet>
+        <title>Additional Info</title>
+        <meta name="description" content="Check Contact and Other Additional Info of Jether" />
+      </Helmet>
+
         <div>
             <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-300 mb-1 block">Additional</span>
             <div className="border-b border-gray-300 mb-10">
