@@ -72,11 +72,18 @@ export default function Homepage() {
                   <IonIcon name="call-outline"></IonIcon>
                   <span className="text-xs">09622635703</span>
                 </div>
-                <div className="flex flex-row items-center text-black border-blue-600 dark:border-blue-300 border-b w-full md:w-fit px-3 md:px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
+                <a 
+                  target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jethermasidong/"
+                  className="flex flex-row items-center border-b text-black border-blue-600 dark:border-blue-300 w-full md:w-fit px-3 md:px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white"
+                >
                   <IonIcon name="logo-linkedin"></IonIcon>
                   <span className="text-xs">LinkedIn</span>
-                </div>
-                <a href="" className="flex flex-row items-center border-b text-black border-blue-600 dark:border-blue-300 w-full md:w-fit px-3 md:px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white">
+                </a>
+                <a 
+                  href="/resume.pdf" 
+                  download="Jether Masidong - Resume.pdf"
+                  className="flex flex-row items-center border-b text-black border-blue-600 dark:border-blue-300 w-full md:w-fit px-3 md:px-5 py-2 transition ease-in-out duration-100 hover:scale-100 hover:-translate-y-1 gap-1 dark:text-white"
+                >
                   <IonIcon name="document-text-outline"></IonIcon>
                   <span className="text-xs">Download CV</span>
                 </a>
