@@ -87,6 +87,7 @@ export default function Projects() {
       image: "",
       date: "September 2026",
       link: "https://github.com/jethermasidong/inplate-b"
+    }
   ];
 
   return (
