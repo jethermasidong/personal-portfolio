@@ -78,7 +78,15 @@ export default function Projects() {
       image: "",
       date: "April 2026",
       link: "https://github.com/jethermasidong/finance-budget-tracker"
-    }
+    },
+    {
+      id: 9,
+      title: "InPlate",
+      description: "Philippine Commodity Price & Inflation Analytics",
+      techStack: ["React", "Typescript", "NodeJS", "Fastify", "PostgreSQL"],
+      image: "",
+      date: "September 2026",
+      link: "https://github.com/jethermasidong/inplate-b"
   ];
 
   return (
