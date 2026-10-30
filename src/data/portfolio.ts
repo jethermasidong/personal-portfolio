@@ -20,7 +20,8 @@ export const Techstacks = [
         category: "Backend",
         skills: [
             { name: "Node JS" },
-            { name: "Express" }, 
+            { name: "Express" },
+            { name: "Fastify" },
             { name: "REST API" }, 
             { name: "PHP" }, 
             { name: "Laravel" },
