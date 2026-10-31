@@ -40,7 +40,7 @@ export default function Homepage() {
         <div className="flex flex-col items-center">
           <div className="flex flex-col md:flex-row justify-center items-center">
             <img src="/profile.png" alt="Profile" className="px-2 py-2 w-75 h-82 md:h-102 md:w-95" />
-            <div className="flex flex-col ml-5 p-5">
+            <div className="flex flex-col p-5">
               <div className="text-5xl md:text-2xl font-display font-extrabold text-slate-900 mb-2 tracking-tight h-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center p-5">
                   <div className="flex flex-row justify-center items-center gap-1">
@@ -49,7 +49,7 @@ export default function Homepage() {
                   </div>
                   <span className="text-blue-600 text-2xl dark:text-blue-300">Full-Stack Developer</span>
                 </div>
-                <div className="p-5 w-80 md:w-157 mb-2 mx-auto flex flex-col items-center text-center">
+                <div className="p-5 max-w-xl md:w-157 mb-2 mx-auto flex flex-col items-center text-center">
                   <p className="text-slate-600 text-sm font-extralight tracking-wide dark:text-white">
                     I am a Full-Stack Developer experienced in engineering robust web applications, scalable backend APIs, 
                     and decentralized systems. I build data-driven platforms and AI-integrated tools using React, Vue, Node.js, 
@@ -63,7 +63,7 @@ export default function Homepage() {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-2 md:flex md:flex-row items-center gap-3 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row items-center gap-3 w-full">
                 <div className="flex flex-row items-center text-black border-black/20 border-b w-full md:w-fit px-3 md:px-5 py-2 gap-1 dark:border-white dark:text-white">
                   <IonIcon name="pin-outline"></IonIcon>
                   <span className="text-xs truncate">Baguio City, Philippines.</span>
